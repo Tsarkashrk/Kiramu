@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: $background-color;
+
+  color: $primary-color;
+
+  &__logo {
+    font-family: $secondary-font-bold;
+    font-size: $lg-font-size;
+    line-height: 100%;
+    color: $primary-color;
+
+    transition: $primary-transition;
+
+    cursor: pointer;
+
+    &:hover {
+      color: $primary-color-hover;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  &__button {
+    border: none;
+
+    background-color: transparent;
+
+    font-family: $primary-font-medium;
+    font-size: $xs-font-size;
+    color: $primary-color;
+
+    cursor: pointer;
+  }
+}

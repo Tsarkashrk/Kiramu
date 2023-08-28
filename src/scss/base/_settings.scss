@@ -1,0 +1,25 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  padding: 1.5rem 2rem;
+
+  background-color: $background-color;
+
+  color: white;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+
+  scroll-behavior: smooth;
+}
