@@ -1,21 +1,16 @@
 import React from 'react';
 import Search from './Search';
+import Navigation from './Navigation';
 
 const Header = () => {
   return (
-    <>
-      <header className="header">
-        <a className='header__logo' href="">Kiramu</a>
+    <header className="header">
+      <a className='header__logo' href="">Kiramu</a>
 
-        <Search />
+      <Search />
 
-        <nav className="header__nav">
-          <button className="header__button">Главная</button>
-          <button className="header__button">Категории</button>
-          <button className="header__button">Случайное</button>
-        </nav>
-      </header>
-    </>
+      <Navigation />
+    </header>
   )
 }
 

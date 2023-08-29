@@ -1,0 +1,16 @@
+.navigation {
+  display: flex;
+  gap: 2.5rem;
+
+  &__link {
+    font-family: $primary-font-medium;
+    font-size: $xs-font-size;
+    color: $primary-color;
+
+    transition: $primary-transition;
+
+    &:hover {
+      color: $primary-color-hover;
+    }
+  }
+}

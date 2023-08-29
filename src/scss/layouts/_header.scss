@@ -21,21 +21,4 @@
       color: $primary-color-hover;
     }
   }
-
-  &__nav {
-    display: flex;
-    gap: 2.5rem;
-  }
-
-  &__button {
-    border: none;
-
-    background-color: transparent;
-
-    font-family: $primary-font-medium;
-    font-size: $xs-font-size;
-    color: $primary-color;
-
-    cursor: pointer;
-  }
 }
