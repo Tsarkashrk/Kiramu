@@ -10,10 +10,18 @@
 
 // Layouts
 
-@import './layouts/header';
-@import './layouts/footer';
+@import '../components/layout/Header/header';
+@import '../components/layout/Footer/footer';
+
+// Screens
+
+@import '../components/screens/NotFound/not-found';
+
+//
+
+
 
 // UI
 
-@import './ui/search';
-@import './ui/navigation';
+@import '../components/ui/Navigation/navigation';
+@import '../components/ui/Search/search';

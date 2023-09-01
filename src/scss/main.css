@@ -94,6 +94,25 @@ body {
   color: #abc5cf;
 }
 
+.navigation {
+  display: flex;
+  gap: 2.5rem;
+}
+.navigation__link {
+  font-family: "MontserratMedium", sans-serif;
+  font-size: 1.6rem;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+.navigation__link:hover {
+  color: #abc5cf;
+}
+.navigation__link--active {
+  font-family: "MontserratMedium", sans-serif;
+  font-size: 1.6rem;
+  color: #abc5cf;
+}
+
 .search {
   position: relative;
   display: flex;
@@ -124,23 +143,4 @@ ion-icon {
   font-size: 2.5rem;
   color: #000000;
   cursor: pointer;
-}
-
-.navigation {
-  display: flex;
-  gap: 2.5rem;
-}
-.navigation__link {
-  font-family: "MontserratMedium", sans-serif;
-  font-size: 1.6rem;
-  color: #ffffff;
-  transition: all 0.3s ease-in-out;
-}
-.navigation__link:hover {
-  color: #abc5cf;
-}
-.navigation__link--active {
-  font-family: "MontserratMedium", sans-serif;
-  font-size: 1.6rem;
-  color: #abc5cf;
 }/*# sourceMappingURL=main.css.map */
