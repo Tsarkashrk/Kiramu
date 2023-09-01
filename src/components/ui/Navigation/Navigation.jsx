@@ -8,8 +8,8 @@ const Navigation = () => {
     <>
       <nav className="navigation">
         <NavLink className={setActive} to="/" >Главная</NavLink>
-        <NavLink className={setActive} to="/categories" onClick={setActive}>Категории</NavLink>
-        <NavLink className={setActive} to="/filter" onClick={setActive}>Фильтр</NavLink>
+        <NavLink className={setActive} to="/categories">Категории</NavLink>
+        <NavLink className={setActive} to="/filter">Фильтр</NavLink>
       </nav>
     </>
   )

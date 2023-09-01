@@ -1,13 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import Search from "../../ui/Search/Search";
 import Navigation from "../../ui/Navigation/Navigation";
 
 const Header = () => {
   return (
     <header className="header">
-      <a className="header__logo" href="/">
+      <Link className="header__logo" to="/">
         Kiramu
-      </a>
+      </Link>
 
       <Search />
 

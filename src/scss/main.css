@@ -80,18 +80,17 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: #000000;
-  color: #ffffff;
 }
 .header__logo {
   font-family: "PoppinsBold", sans-serif;
   font-size: 3rem;
   line-height: 100%;
   color: #ffffff;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 .header__logo:hover {
-  color: #abc5cf;
+  color: #c0c0c0;
 }
 
 .navigation {
@@ -99,18 +98,18 @@ body {
   gap: 2.5rem;
 }
 .navigation__link {
-  font-family: "MontserratMedium", sans-serif;
+  font-family: "MontserratSemiBold", sans-serif;
   font-size: 1.6rem;
-  color: #ffffff;
-  transition: all 0.3s ease-in-out;
+  color: #929292;
+  transition: all 0.2s ease-in-out;
 }
 .navigation__link:hover {
-  color: #abc5cf;
+  color: #c0c0c0;
 }
 .navigation__link--active {
   font-family: "MontserratMedium", sans-serif;
   font-size: 1.6rem;
-  color: #abc5cf;
+  color: #ffffff;
 }
 
 .search {

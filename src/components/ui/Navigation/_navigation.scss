@@ -3,20 +3,20 @@
   gap: 2.5rem;
 
   &__link {
-    font-family: $primary-font-medium;
+    font-family: $primary-font-semibold;
     font-size: $xs-font-size;
-    color: $primary-color;
+    color: $font-color-ignore;
 
     transition: $primary-transition;
 
     &:hover {
-      color: $primary-color-hover;
+      color: $font-color-hover;
     }
 
     &--active {
       font-family: $primary-font-medium;
       font-size: $xs-font-size;
-      color: $primary-color-hover;
+      color: $font-color-active;
     }
   }
 }

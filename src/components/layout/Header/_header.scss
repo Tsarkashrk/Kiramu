@@ -5,20 +5,18 @@
 
   background-color: $background-color;
 
-  color: $primary-color;
-
   &__logo {
     font-family: $secondary-font-bold;
     font-size: $lg-font-size;
     line-height: 100%;
-    color: $primary-color;
+    color: $font-color-active;
 
     transition: $primary-transition;
 
     cursor: pointer;
 
     &:hover {
-      color: $primary-color-hover;
+      color: $font-color-hover;
     }
   }
 }
