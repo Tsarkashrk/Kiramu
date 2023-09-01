@@ -6,9 +6,7 @@ const Header = () => {
   return (
     <header className="header">
       <a className='header__logo' href="">Kiramu</a>
-
       <Search />
-
       <Navigation />
     </header>
   )
