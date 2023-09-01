@@ -1,9 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Home from "../pages/Home";
 
 const NotFound = () => {
   return (
-    <div className="not-found">NotFound</div>
+    <main className="not-found">
+      СТРАНИЦА НЕ НАЙДЕНА
+      <Link to="/">Главная</Link>
+    </main>
   )
 }
 
-export default NotFound;
+export default NotFound

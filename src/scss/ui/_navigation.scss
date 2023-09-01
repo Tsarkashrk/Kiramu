@@ -12,5 +12,11 @@
     &:hover {
       color: $primary-color-hover;
     }
+
+    &--active {
+      font-family: $primary-font-medium;
+      font-size: $xs-font-size;
+      color: $primary-color-hover;
+    }
   }
 }

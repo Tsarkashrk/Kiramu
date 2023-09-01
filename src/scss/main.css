@@ -138,4 +138,9 @@ ion-icon {
 }
 .navigation__link:hover {
   color: #abc5cf;
+}
+.navigation__link--active {
+  font-family: "MontserratMedium", sans-serif;
+  font-size: 1.6rem;
+  color: #abc5cf;
 }/*# sourceMappingURL=main.css.map */

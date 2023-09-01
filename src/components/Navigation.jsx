@@ -1,16 +1,15 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
-import Home from "../pages/Home";
-import Categories from "../pages/Categories";
-import Filter from "../pages/Filter";
+import { Routes, Route, NavLink } from "react-router-dom";  
+
+const setActive = ({isActive}) => isActive ? "navigation__link--active" : "navigation__link";
 
 const Navigation = () => {
   return (
     <>
       <nav className="navigation">
-        <Link className="navigation__link" to="/">Главная</Link>
-        <Link className="navigation__link" to="/categories">Категории</Link>
-        <Link className="navigation__link" to="/filter">Фильтр</Link>
+        <NavLink className={setActive} to="/" >Главная</NavLink>
+        <NavLink className={setActive} to="/categories" onClick={setActive}>Категории</NavLink>
+        <NavLink className={setActive} to="/filter" onClick={setActive}>Фильтр</NavLink>
       </nav>
     </>
   )
