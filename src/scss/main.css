@@ -93,8 +93,21 @@ body {
   color: #c0c0c0;
 }
 
-.footer__contacts > ion-icon {
+.footer__contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.footer__link {
+  color: #ffffff;
+}
+.footer__link :hover {
+  color: #929292;
+}
+.footer__link > ion-icon {
   font-size: 6rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .home {

@@ -1,9 +1,21 @@
 .footer { 
   
   &__contacts {
+    @include d-flex-scn;
+    gap: 2rem;
+  }
+
+  &__link {
+    color: $font-color-active;
+
+    :hover {
+      color: $font-color-ignore;
+    }
 
     >ion-icon {
       font-size: 6rem;
+
+      transition: $primary-transition;
     }
   }
 }
