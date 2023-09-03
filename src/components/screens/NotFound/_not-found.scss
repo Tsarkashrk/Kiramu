@@ -1,0 +1,10 @@
+.not-found {
+  @include d-flex-scn;
+  flex-direction: column;
+  gap: 5rem;
+
+  height: 85vh;
+
+  font-family: $primary-font-bold;
+  font-size: 5rem;
+}

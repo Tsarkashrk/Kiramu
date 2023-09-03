@@ -5,8 +5,8 @@ import Home from "../Home/Home";
 const NotFound = () => {
   return (
     <main className="not-found">
-      СТРАНИЦА НЕ НАЙДЕНА
-      <Link to="/">Главная</Link>
+      Упссс... Страница не найдена
+      <Link to="/" className="button">Главная</Link>
     </main>
   );
 };
