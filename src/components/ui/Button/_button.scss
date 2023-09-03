@@ -1,0 +1,48 @@
+.button {
+  padding: 1.5rem 2rem;
+
+  border: none;
+  border-radius: $border-radius;
+
+  background-color: $font-color-active;
+
+  font-family: $primary-font-semibold;
+  font-size: $xs-font-size;
+  color: $background-color;
+
+  cursor: pointer;
+
+  transition: $primary-transition;
+
+  &:hover {
+    background-color: $font-color-hover;
+  }
+
+  &--secondary {
+    padding: $buttons-padding;
+
+    background-color: $background-color-light;
+
+    color: $font-color-ignore;
+
+    &:hover {
+      background-color: $background-color-lighter;
+
+      color: $font-color-active;
+    }
+
+    &--active {
+      align-self: center;
+
+      padding: $buttons-padding;
+
+      border-radius: 10rem;
+
+      background-color: $font-color-active;
+
+      font-family: $primary-font-semibold;
+      font-size: $xs-font-size;
+      color: $background-color;
+    }
+  }
+}

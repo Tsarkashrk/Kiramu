@@ -2,6 +2,14 @@
 
 $search-max-width: 100rem;
 
+// Padding 
+
+$buttons-padding: 1rem 2rem;
+
+// Border-radius 
+
+$border-radius: 10rem;
+
 // Font-family
 
 $primary-font-regular: "MontserratRegular", sans-serif;
@@ -25,6 +33,8 @@ $lg-font-size: 3rem;
 // Color
 
 $background-color: #000000;
+$background-color-light: #151515;
+$background-color-lighter: #292929;
 $font-color-active: #ffffff;
 $font-color-hover: #c0c0c0;
 $font-color-ignore: #929292;

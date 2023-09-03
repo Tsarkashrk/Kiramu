@@ -1,9 +1,11 @@
-import React from "react";
+import React from 'react';
+
+import HeroSection from '../../ui/HeroSection/HeroSection';
 
 const Home = () => {
   return (
-    <main className="home">
-      HOME
+    <main className='home'>
+      <HeroSection />
     </main>
   )
 }

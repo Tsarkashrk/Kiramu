@@ -1,0 +1,11 @@
+@mixin d-flex-prm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin d-flex-scn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,22 +1,4 @@
 .navigation {
   display: flex;
-  gap: 2.5rem;
-
-  &__link {
-    font-family: $primary-font-semibold;
-    font-size: $xs-font-size;
-    color: $font-color-ignore;
-
-    transition: $primary-transition;
-
-    &:hover {
-      color: $font-color-hover;
-    }
-
-    &--active {
-      font-family: $primary-font-medium;
-      font-size: $xs-font-size;
-      color: $font-color-active;
-    }
-  }
+  gap: 1rem;
 }

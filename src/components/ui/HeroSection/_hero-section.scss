@@ -1,0 +1,24 @@
+.hero-section {
+  @include d-flex-scn;
+  flex-direction: column;
+
+  margin: 20rem auto;
+
+  &__heading {
+    @include d-flex-scn;
+    flex-direction: column;
+
+    margin-bottom: 5rem;
+  }
+
+  &__title {
+    font-family: $primary-font-bold;  
+    font-size: 5rem;
+  }
+
+  &__description {
+    font-family: $primary-font-medium;
+    font-size: $md-font-size;
+    color: $font-color-hover;
+  }
+}

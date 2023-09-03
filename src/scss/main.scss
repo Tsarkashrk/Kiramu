@@ -16,12 +16,12 @@
 // Screens
 
 @import '../components/screens/NotFound/not-found';
-
-//
-
-
+@import '../components/screens/Home/home';
 
 // UI
 
 @import '../components/ui/Navigation/navigation';
 @import '../components/ui/Search/search';
+@import '../components/ui/Heading/heading';
+@import '../components/ui/Button/button';
+@import '../components/ui/HeroSection/hero-section';

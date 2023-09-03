@@ -1,9 +1,7 @@
 .search {
     position: relative;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include d-flex-scn;
 
     max-width: $search-max-width;
     width: 100%;
@@ -12,31 +10,45 @@
     max-width: $search-max-width;
     width: 100%;
 
-    padding: 1rem;
+    height: 4.4rem;
+
+    padding: 1.2rem 2rem;
 
     border: none;
-    border-radius: 2rem;
+    border-radius: $border-radius;
 
-    background-color: $font-color-active;
+    background-color: $background-color-light;
 
     font-family: $primary-font-medium;
     font-size: $xs-font-size;
-    color: $background-color;
+    color: $font-color-active;
 
-    outline: none;
+    outline: none;;
 
     &::-webkit-input-placeholder{ 
-      color: $background-color;
+      color: $font-color-ignore;
     }
   }
-}
 
-ion-icon {
-  position: absolute;
-  right: 1rem;    
+  &__button {
+    position: absolute;
+    right: 1.5rem;    
 
-  font-size: 2.5rem;
-  color: $background-color;
+    border: none;
 
-  cursor: pointer;
+    background-color: transparent;
+
+    >ion-icon {
+      font-size: 2.5rem;
+      color: $font-color-ignore;
+    
+      transition: $primary-transition;
+  
+      cursor: pointer;
+  
+      &:hover {
+        color: $font-color-active;
+      }
+    }
+  }
 }
