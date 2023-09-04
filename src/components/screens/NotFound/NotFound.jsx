@@ -6,7 +6,7 @@ const NotFound = () => {
   return (
     <main className="not-found">
       Упссс... Страница не найдена
-      <Link to="/" className="button">Главная</Link>
+      <Link to="/" className="button">Перейти на главную страницу</Link>
     </main>
   );
 };

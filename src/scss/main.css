@@ -83,6 +83,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   background-color: #000000;
 }
 .header__logo {
