@@ -1,5 +1,4 @@
 html {
-  height: 100vh;
   font-size: 62.5%;
 }
 
@@ -13,16 +12,11 @@ html {
 
 body {
   padding: 1.5rem 2rem;
-  min-height: 100vh;
   background-color: #000000;
   color: white;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   scroll-behavior: smooth;
-}
-
-main {
-  height: calc(100vh - 13.8rem);
 }
 
 ::selection {
@@ -128,7 +122,69 @@ main {
   color: #c0c0c0;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__rights {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 30rem;
+  width: 30rem;
+}
+.footer__title {
+  font-family: "MontserratMedium", sans-serif;
+  font-size: 3rem;
+  line-height: 100%;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.footer__title:hover {
+  color: #c0c0c0;
+}
+.footer__description {
+  font-family: "MontserratMedium", sans-serif;
+  font-size: 1.6rem;
+  color: #c0c0c0;
+}
+.footer__project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 30rem;
+  width: 30rem;
+}
+.footer__logo {
+  font-family: "PoppinsBold", sans-serif;
+  font-size: 7rem;
+  line-height: 100%;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.footer__logo:hover {
+  color: #c0c0c0;
+}
+.footer__author {
+  font-family: "MontserratMedium", sans-serif;
+  font-size: 1.6rem;
+}
 .footer__contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 30rem;
+  width: 30rem;
+}
+.footer__links {
   display: flex;
   justify-content: center;
   align-items: center;

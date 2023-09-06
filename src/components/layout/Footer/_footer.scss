@@ -1,6 +1,76 @@
 .footer { 
+  @include d-flex-prm;
+
+  &__rights {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+
+    max-width: 30rem;
+    width: 30rem;
+  }
+
+  &__title {
+    font-family: $primary-font-medium;
+    font-size: $lg-font-size;
+    line-height: 100%;
+    color: $font-color-active;
+
+    transition: $primary-transition;
+
+    cursor: pointer;
+
+    &:hover {
+      color: $font-color-hover;
+    }
+  }
+
+  &__description {
+    font-family: $primary-font-medium;
+    font-size: $xs-font-size;
+    color: $font-color-hover;
+  }
+
+  &__project {
+    @include d-flex-scn;
+    flex-direction: column;
+    gap: 2rem;
+
+    max-width: 30rem;
+    width: 30rem;
+  }
+
+  &__logo {
+    font-family: $secondary-font-bold;
+    font-size: $xl-font-size;
+    line-height: 100%;
+    color: $font-color-active;
+
+    transition: $primary-transition;
+
+    cursor: pointer;
+
+    &:hover {
+      color: $font-color-hover;
+    }
+  }
+
+  &__author {
+    font-family: $primary-font-medium;
+    font-size: $xs-font-size;
+  }
   
   &__contacts {
+    @include d-flex-prm;
+    flex-direction: column;
+    gap: 2rem;
+
+    max-width: 30rem;
+    width: 30rem;
+  }
+
+  &__links {
     @include d-flex-scn;
     gap: 2rem;
   }
