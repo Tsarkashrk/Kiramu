@@ -214,6 +214,7 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 5rem;
+  padding: 40rem 0;
   font-family: "MontserratBold", sans-serif;
   font-size: 5rem;
 }
