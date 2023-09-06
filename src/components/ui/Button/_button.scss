@@ -7,7 +7,7 @@
   background-color: $font-color-active;
 
   font-family: $primary-font-semibold;
-  font-size: $xs-font-size;
+  font-size: $sm-font-size;
   color: $background-color;
 
   cursor: pointer;
@@ -23,6 +23,7 @@
 
     background-color: $background-color-light;
 
+    font-size: $xs-font-size;
     color: $font-color-ignore;
 
     &:hover {

@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 const Filter = () => {
   return (
-    <main className="filter">
+    <main className='filter'>
       FILTER
     </main>
   )

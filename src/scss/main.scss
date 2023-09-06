@@ -8,20 +8,23 @@
 @import './base/settings';
 @import './base/typography';
 
-// Layouts
+// Components
+
+@import '../components/Heading/heading';
+@import '../components/HeroSection/hero-section';
+
+// Layout
 
 @import '../components/layout/Header/header';
 @import '../components/layout/Footer/footer';
 
-// Screens
+// Pages
 
-@import '../components/screens/NotFound/not-found';
-@import '../components/screens/Home/home';
+@import '../pages/Home/home';
+@import '../pages/NotFound/not-found';
 
 // UI
 
 @import '../components/ui/Navigation/navigation';
 @import '../components/ui/Search/search';
-@import '../components/ui/Heading/heading';
 @import '../components/ui/Button/button';
-@import '../components/ui/HeroSection/hero-section';

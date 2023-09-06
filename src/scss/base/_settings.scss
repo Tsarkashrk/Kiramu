@@ -1,4 +1,6 @@
 html {
+  height: 100vh;
+
   font-size: 62.5%;
 }
 
@@ -15,6 +17,8 @@ html {
 body {
   padding: 1.5rem 2rem;
 
+  min-height: 100vh;
+
   background-color: $background-color;
 
   color: white;
@@ -22,6 +26,10 @@ body {
   line-height: 1.5;
 
   scroll-behavior: smooth;
+}
+
+main {
+  height: calc(100vh - 13.8rem);
 }
 
 ::selection {

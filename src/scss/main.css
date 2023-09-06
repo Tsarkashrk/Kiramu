@@ -1,4 +1,5 @@
 html {
+  height: 100vh;
   font-size: 62.5%;
 }
 
@@ -12,11 +13,16 @@ html {
 
 body {
   padding: 1.5rem 2rem;
+  min-height: 100vh;
   background-color: #000000;
   color: white;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   scroll-behavior: smooth;
+}
+
+main {
+  height: calc(100vh - 13.8rem);
 }
 
 ::selection {
@@ -79,6 +85,30 @@ body {
   src: local("Montserrat Bold"), local("Montserrat-Bold"), url(/fonts/Montserrat/Montserrat-Bold.woff2) format("woff2"), url(/fonts/Montserrat/Montserrat-Bold.woff) format("woff");
   font-display: swap;
 }
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20rem auto;
+}
+.hero-section__heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 5rem;
+}
+.hero-section__title {
+  font-family: "MontserratBold", sans-serif;
+  font-size: 5rem;
+}
+.hero-section__description {
+  font-family: "MontserratMedium", sans-serif;
+  font-size: 2rem;
+  color: #c0c0c0;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -115,22 +145,21 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .not-found {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 5rem;
-  height: 85vh;
   font-family: "MontserratBold", sans-serif;
   font-size: 5rem;
-}
-
-.home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .navigation {
@@ -184,7 +213,7 @@ body {
   border-radius: 10rem;
   background-color: #ffffff;
   font-family: "MontserratSemiBold", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #000000;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -195,6 +224,7 @@ body {
 .button--secondary {
   padding: 1rem 2rem;
   background-color: #151515;
+  font-size: 1.6rem;
   color: #929292;
 }
 .button--secondary:hover {
@@ -209,28 +239,4 @@ body {
   font-family: "MontserratSemiBold", sans-serif;
   font-size: 1.6rem;
   color: #000000;
-}
-
-.hero-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 20rem auto;
-}
-.hero-section__heading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 5rem;
-}
-.hero-section__title {
-  font-family: "MontserratBold", sans-serif;
-  font-size: 5rem;
-}
-.hero-section__description {
-  font-family: "MontserratMedium", sans-serif;
-  font-size: 2rem;
-  color: #c0c0c0;
 }/*# sourceMappingURL=main.css.map */

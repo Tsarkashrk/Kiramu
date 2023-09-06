@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 const Categories = () => {
   return (
-    <main className="categories">
+    <main className='categories'>
       CATEGORIES
     </main>
   )
