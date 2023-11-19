@@ -17,16 +17,16 @@
     border: none;
     border-radius: $border-radius;
 
-    background-color: $background-color-light;
+    background-color: $bg-color-light;
 
     font-family: $primary-font-medium;
     font-size: $xs-font-size;
-    color: $font-color-active;
+    color: $color-active;
 
     outline: none;;
 
     &::-webkit-input-placeholder{ 
-      color: $font-color-ignore;
+      color: $color-ignore;
     }
   }
 
@@ -40,14 +40,14 @@
 
     >ion-icon {
       font-size: 2.5rem;
-      color: $font-color-ignore;
+      color: $color-ignore;
     
       transition: $primary-transition;
   
       cursor: pointer;
   
       &:hover {
-        color: $font-color-active;
+        color: $color-active;
       }
     }
   }

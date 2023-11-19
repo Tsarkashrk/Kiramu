@@ -28,18 +28,22 @@ $xxs-font-size: 1.4rem;
 $xs-font-size: 1.6rem;
 $sm-font-size: 1.8rem;
 $md-font-size: 2rem;
-$xm-font-size: 2.4rem;
-$lg-font-size: 3rem;
-$xl-font-size: 7rem;
+$xm-font-size: 2.2rem;
+$xxm-font-size: 2.4rem;
+$lg-font-size: 2.8rem;
+$xl-font-size: 3rem;
+$xxl-font-size: 3.2rem;
+
+$title-font-size: 1.5rem;
 
 // Color
 
-$background-color: #000000;
-$background-color-light: #151515;
-$background-color-lighter: #292929;
-$font-color-active: #ffffff;
-$font-color-hover: #c0c0c0;
-$font-color-ignore: #929292;
+$bg-color: #131313;
+$bg-color-light: #262626;
+$bg-color-lighter: #393939;
+$color-active: #ffffff;
+$color-hover: #c0c0c0;
+$color-ignore: #929292;
 
 // Transition
 

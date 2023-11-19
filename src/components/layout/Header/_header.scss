@@ -2,20 +2,20 @@
   @include d-flex-prm;
   gap: 1rem;
 
-  background-color: $background-color;
+  background-color: $bg-color;
 
   &__logo {
     font-family: $secondary-font-bold;
     font-size: $lg-font-size;
     line-height: 100%;
-    color: $font-color-active;
+    color: $color-active;
 
     transition: $primary-transition;
 
     cursor: pointer;
 
     &:hover {
-      color: $font-color-hover;
+      color: $color-hover;
     }
   }
 }

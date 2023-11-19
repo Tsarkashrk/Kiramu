@@ -1,0 +1,18 @@
+.heading {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+
+  width: 100%;
+
+  &__title {
+    font-family: $primary-font-bold;
+    font-size: $lg-font-size;
+  }
+
+  &__description {
+    font-family: $primary-font-medium;
+    font-size: $sm-font-size;
+    color: $color-ignore;
+  }
+}

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Button = (props) => {
   return (
     <>
-      <NavLink to='/list' className='button'>{props.title}</NavLink>
+      <NavLink to='/catalog' className='button'>{props.title}</NavLink>
     </>
   ) 
 }

@@ -7,7 +7,6 @@
     flex-direction: column;
     gap: 2rem;
 
-    max-width: 30rem;
     width: 30rem;
   }
 
@@ -15,29 +14,22 @@
     font-family: $primary-font-medium;
     font-size: $lg-font-size;
     line-height: 100%;
-    color: $font-color-active;
-
-    transition: $primary-transition;
-
-    cursor: pointer;
-
-    &:hover {
-      color: $font-color-hover;
-    }
+    color: $color-active;
   }
 
   &__description {
     font-family: $primary-font-medium;
     font-size: $xs-font-size;
-    color: $font-color-hover;
+    color: $color-ignore;
   }
 
   &__project {
-    @include d-flex-scn;
+    display: flex;
+    justify-content: center;
+    align-items: left;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
 
-    max-width: 30rem;
     width: 30rem;
   }
 
@@ -45,20 +37,21 @@
     font-family: $secondary-font-bold;
     font-size: $xl-font-size;
     line-height: 100%;
-    color: $font-color-active;
+    color: $color-active;
 
     transition: $primary-transition;
 
     cursor: pointer;
 
     &:hover {
-      color: $font-color-hover;
+      color: $color-hover;
     }
   }
 
   &__author {
     font-family: $primary-font-medium;
     font-size: $xs-font-size;
+    color: $color-ignore;
   }
   
   &__contacts {
@@ -66,7 +59,6 @@
     flex-direction: column;
     gap: 2rem;
 
-    max-width: 30rem;
     width: 30rem;
   }
 
@@ -76,10 +68,10 @@
   }
 
   &__link {
-    color: $font-color-active;
+    color: $color-active;
 
     :hover {
-      color: $font-color-ignore;
+      color: $color-ignore;
     }
 
     >ion-icon {

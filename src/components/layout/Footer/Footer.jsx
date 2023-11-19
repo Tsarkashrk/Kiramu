@@ -6,9 +6,9 @@ const Footer = () => {
       <div className='footer__project'>
         <h2 className='footer__logo'>Kiramu</h2>
         <div className='footer__author'>
-          © Copyright Danime 2023
+          © Copyright Kiramu 2023
           <br></br>
-          Developed by: Green Line Studio
+          Developed by: tsarka
         </div>
       </div>
 

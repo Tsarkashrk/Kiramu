@@ -4,32 +4,32 @@
   border: none;
   border-radius: $border-radius;
 
-  background-color: $font-color-active;
+  background-color: $color-active;
 
   font-family: $primary-font-semibold;
   font-size: $sm-font-size;
-  color: $background-color;
+  color: $bg-color;
 
   cursor: pointer;
 
   transition: $primary-transition;
 
   &:hover {
-    background-color: $font-color-hover;
+    background-color: $color-hover;
   }
 
   &--secondary {
     padding: $buttons-padding;
 
-    background-color: $background-color-light;
+    background-color: $bg-color-light;
 
     font-size: $xs-font-size;
-    color: $font-color-ignore;
+    color: $color-ignore;
 
     &:hover {
-      background-color: $background-color-lighter;
+      background-color: $bg-color-lighter;
 
-      color: $font-color-active;
+      color: $color-active;
     }
 
     &--active {
@@ -39,11 +39,11 @@
 
       border-radius: 10rem;
 
-      background-color: $font-color-active;
+      background-color: $color-active;
 
       font-family: $primary-font-semibold;
       font-size: $xs-font-size;
-      color: $background-color;
+      color: $bg-color;
     }
   }
 }

@@ -6,10 +6,9 @@ const setActive = ({isActive}) => isActive ? 'button button--secondary--active' 
 const Navigation = () => {
   return (
       <nav className='navigation'>
-        <NavLink className={setActive} to='/' >Главная</NavLink>
-        <NavLink className={setActive} to='/list' >Список</NavLink>
-        <NavLink className={setActive} to='/categories'>Категории</NavLink>
-        <NavLink className={setActive} to='/filter'>Фильтр</NavLink>
+        <NavLink className={setActive} to='/'>Главная</NavLink>
+        <NavLink className={setActive} to='/catalog'>Каталог</NavLink>
+        <NavLink className={setActive} to='/anime'>Рандом</NavLink>
       </nav>
   )
 }

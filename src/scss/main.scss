@@ -15,6 +15,7 @@
 
 // Layout
 
+@import '../components/layout/layout';
 @import '../components/layout/Header/header';
 @import '../components/layout/Footer/footer';
 
@@ -22,9 +23,12 @@
 
 @import '../pages/Home/home';
 @import '../pages/NotFound/not-found';
+@import '../pages/Anime/anime';
 
 // UI
 
 @import '../components/ui/Navigation/navigation';
 @import '../components/ui/Search/search';
 @import '../components/ui/Button/button';
+@import '../components/ui/Card/card';
+@import '../components/ui/Preloader/preloader';

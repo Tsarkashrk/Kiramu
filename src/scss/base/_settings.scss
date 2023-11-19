@@ -15,7 +15,7 @@ html {
 body {
   padding: 1.5rem 2rem;
 
-  background-color: $background-color;
+  background-color: $bg-color;
 
   color: white;
   text-rendering: optimizeSpeed;
@@ -26,4 +26,8 @@ body {
 
 ::selection {
   background-color: gray;
+}
+
+main {
+  margin: 5rem auto;
 }
