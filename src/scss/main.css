@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 62.5%;
 }
@@ -11,12 +12,23 @@ html {
 }
 
 body {
-  padding: 1.5rem 2rem;
   background-color: #131313;
-  color: white;
+  color: #ffffff;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #262626;
+}
+body::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #393939;
 }
 
 ::selection {
@@ -25,6 +37,7 @@ body {
 
 main {
   margin: 5rem auto;
+  padding: 0 2rem;
 }
 
 @font-face {
@@ -104,7 +117,26 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 20rem auto;
+  width: 100%;
+  height: 70rem;
+  margin-bottom: 7rem;
+  background: url("/images/nebo.jpg") no-repeat;
+  background-size: cover;
+  border-radius: 2.5rem;
+  border: 1px solid #262626;
+}
+.hero-section__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 10rem;
+  border-radius: 2.5rem;
+  background: rgba(18, 18, 18, 0.5);
+  backdrop-filter: blur(5px);
+  text-align: center;
 }
 .hero-section__heading {
   display: flex;
@@ -120,7 +152,7 @@ main {
 .hero-section__description {
   font-family: "MontserratMedium", sans-serif;
   font-size: 2rem;
-  color: #929292;
+  color: #c0c0c0;
 }
 
 .layout {
@@ -141,6 +173,7 @@ main {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  padding: 1.5rem 2rem;
   background-color: #131313;
 }
 .header__logo {
@@ -159,6 +192,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1.5rem 2rem;
 }
 .footer__rights {
   display: flex;
@@ -351,7 +385,7 @@ main {
   max-height: 37rem;
   height: 100%;
   filter: saturate(150%);
-  border: 1px solid rgb(32, 32, 32);
+  border: 1px solid #262626;
   border-radius: 2rem;
   transition: all 0.2s ease-in-out;
 }
@@ -379,10 +413,7 @@ main {
   color: #ffffff;
 }
 .card__status--secondary {
-  background-color: rgb(255, 173, 49);
-}
-.card__status--undefined {
-  background-color: black;
+  background-color: #ffad31;
 }
 .card__text {
   display: flex;
@@ -405,7 +436,7 @@ main {
   color: #c0c0c0;
 }
 .card__year {
-  color: rgb(255, 186, 68);
+  color: #ffad31;
 }
 .card:hover {
   transform: scale(1.05);
@@ -414,9 +445,6 @@ main {
   border: 1px solid #ffffff;
   filter: saturate(400%);
   opacity: 0.1;
-}
-.card:hover .card__status {
-  border-color: rgb(59, 59, 59);
 }
 .card:hover .card__details {
   display: flex;
@@ -548,4 +576,102 @@ main {
   to {
     opacity: 1;
   }
+}
+.swiper {
+  height: 100%;
+  width: 100%;
+  margin: 7rem 0 5rem;
+}
+.swiper__slide {
+  height: 100%;
+  max-width: 92.6rem;
+  width: 100%;
+  border-radius: 2rem;
+  background-color: #262626;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.9) !important;
+}
+.swiper__slide--active {
+  background-color: #393939;
+  transform: scale(1) !important;
+}
+.swiper__link {
+  display: flex;
+}
+.swiper__image {
+  border: 1px solid #262626;
+  border-radius: 2rem;
+  filter: saturate(150%);
+}
+.swiper__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem;
+}
+.swiper__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: start;
+  gap: 3rem;
+}
+.swiper__title {
+  font-family: "MontserratBold", sans-serif;
+  font-size: 2.2rem;
+  color: #ffffff;
+}
+.swiper__description {
+  font-family: "MontserratRegular", sans-serif;
+  font-size: 1.7rem;
+  color: #c0c0c0;
+  -webkit-line-clamp: 6;
+  display: -webkit-box; /* Включаем флексбоксы */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden;
+}
+.swiper__stats {
+  display: flex;
+  flex-direction: column;
+  font-family: "MontserratSemiBold", sans-serif;
+  font-size: 1.7rem;
+  color: #c0c0c0;
+}
+.swiper__subtitle {
+  color: #ffffff;
+}
+.swiper__year-status {
+  display: flex;
+  gap: 1rem;
+  color: #ffad31;
+}
+.swiper__genres {
+  color: #c0c0c0;
+}
+.swiper__button--first, .swiper__button--second {
+  position: absolute;
+  top: calc(50% - 6rem);
+  padding: 2rem 1.3rem;
+  border: none;
+  border-radius: 1rem;
+  -webkit-backdrop-filter: blur(13px);
+  backdrop-filter: blur(15px);
+  background: hsla(258, 4%, 55%, 0.32);
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.2s ease-in-out;
+}
+.swiper__button--first:hover, .swiper__button--second:hover {
+  transform: scale(1.2);
+}
+.swiper__button--first {
+  left: 0;
+  margin-left: 4rem;
+}
+.swiper__button--second {
+  right: 0;
+  margin-right: 4rem;
+}
+.swiper__arrow {
+  width: 2.5rem;
 }/*# sourceMappingURL=main.css.map */

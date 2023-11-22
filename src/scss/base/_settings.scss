@@ -13,15 +13,29 @@ html {
 }
 
 body {
-  padding: 1.5rem 2rem;
 
   background-color: $bg-color;
 
-  color: white;
+  color: $color-active;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 
   scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $bg-color-light;
+  }
+  
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: $bg-color-lighter;
+  }
 }
 
 ::selection {
@@ -30,4 +44,5 @@ body {
 
 main {
   margin: 5rem auto;
+  padding: 0 2rem;
 }

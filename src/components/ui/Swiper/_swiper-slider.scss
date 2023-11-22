@@ -1,0 +1,132 @@
+.swiper {
+  height: 100%;
+  width: 100%;
+
+  margin: 7rem 0 5rem;
+
+  &__slide {
+    height: 100%;
+
+    max-width: 92.6rem;
+    width: 100%;
+
+    border-radius: 2rem;
+    background-color: $bg-color-light;
+
+    transition: $primary-transition;
+
+    transform: scale(0.9) !important;
+
+    &--active {
+      background-color: $bg-color-lighter;
+      transform: scale(1) !important;
+    }
+  }
+
+  &__link {
+    display: flex;
+  }
+
+  &__image {
+    border: 1px solid $bg-color-light;
+    border-radius: 2rem;
+
+    filter: saturate(150%);
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: start;
+    gap: 3rem;
+  }
+
+  &__title {
+    font-family: $primary-font-bold;
+    font-size: $xm-font-size;
+    color: $color-active;
+  }
+
+  &__description {
+    font-family: $primary-font-regular;
+    font-size: 1.7rem;
+    color: $color-hover;
+
+    -webkit-line-clamp: 6;
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden;
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column;
+
+    font-family: $primary-font-semibold;
+    font-size: 1.7rem;
+    color: $color-hover;
+  }
+
+  &__subtitle {
+    color: $color-active;
+  }
+
+  &__year-status {
+    display: flex;
+    gap: 1rem;
+
+    color: $status-completed-color;
+  }
+
+  &__genres {
+    color: $color-hover;
+  }
+
+  &__button--first, &__button--second {
+    position: absolute;
+    top: calc(50% - 6rem);
+
+    padding: 2rem 1.3rem; 
+
+    border: none;
+    border-radius: 1rem;
+
+    -webkit-backdrop-filter: blur(13px);
+    backdrop-filter: blur(15px);
+    background: hsla(258,4%,55%,.32);
+
+    cursor: pointer;
+
+    z-index: 2;
+
+    transition: $primary-transition;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  &__button--first {
+    left: 0;
+
+    margin-left: 4rem;
+  }
+
+  &__button--second {
+    right: 0;
+
+    margin-right: 4rem;
+  }
+
+  &__arrow {
+    width: 2.5rem;
+  }
+}

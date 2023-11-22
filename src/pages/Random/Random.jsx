@@ -5,6 +5,7 @@ const Random = () => {
 
   return (
     <main className="random">
+      random
     </main>
   )
 }

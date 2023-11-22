@@ -29,7 +29,7 @@
 
     filter: saturate(150%);
 
-    border: 1px solid rgb(32, 32, 32);
+    border: 1px solid $bg-color-light;
     border-radius: 2rem;
 
     transition: $primary-transition;
@@ -59,7 +59,7 @@
     border-top-right-radius: 2rem;
     border-top-left-radius: 2rem;
 
-    background-color: #6f42c1;
+    background-color: $status-ongoing-color;
 
     font-family: $primary-font-regular;
     font-size: $xs-font-size;
@@ -67,11 +67,7 @@
   }
 
   &__status--secondary {
-    background-color: rgb(255, 173, 49);
-  }
-
-  &__status--undefined {
-    background-color: black;
+    background-color: $status-completed-color;
   }
 
   &__text {
@@ -101,7 +97,7 @@
   }
 
   &__year {
-    color:rgb(255, 186, 68);
+    color: $status-completed-color;
   }
 
   &:hover {
@@ -112,10 +108,6 @@
 
       filter: saturate(400%);
       opacity: 0.1;
-    }
-
-    .card__status {
-      border-color: rgb(59, 59, 59);
     }
 
     .card__details {

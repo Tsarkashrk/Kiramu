@@ -1,6 +1,8 @@
 .footer { 
   @include d-flex-prm;
 
+  padding: 1.5rem 2rem;
+
   &__rights {
     display: flex;
     justify-content: center;
