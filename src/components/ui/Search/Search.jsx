@@ -8,7 +8,7 @@ const Search = () => {
 
   const handleInputChange = (e) => {
     setText(e.target.value);
-  }
+  };
 
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
@@ -17,19 +17,28 @@ const Search = () => {
   };
 
   const handleSearch = () => {
-    navigate(`/search/${text}`);
-  }
+    if (text.length >= 3) {
+      navigate(`/search/${text}`);
+    }
+  };
 
   return (
-    <div className='search'>
-      <input className='search__input' name='input' type='text' placeholder='Найди свое аниме...' value={text || ' '} onChange={handleInputChange} onKeyDown={handleKeyPress}/>
-      
-      <button className='search__button' onClick={handleSearch}>
-        <ion-icon name='search'></ion-icon>
+    <div className="search">
+      <input
+        className="search__input"
+        name="input"
+        type="text"
+        placeholder="Найди свое аниме..."
+        value={text || ''}
+        onChange={handleInputChange}
+        onKeyDown={handleKeyPress}
+      />
+
+      <button className="search__button" onClick={handleSearch}>
+        <ion-icon name="search"></ion-icon>
       </button>
-      
     </div>
-  )
-}
+  );
+};
 
 export default Search;
