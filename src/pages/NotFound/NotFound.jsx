@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const NotFound = ({title} = 'Упссс... Страница не найдена') => {
+const NotFound = ({title = 'Упссс... Страница не найдена'}) => {
   return (
     <main className='not-found'>
       {title}
