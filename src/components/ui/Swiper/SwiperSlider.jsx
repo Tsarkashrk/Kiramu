@@ -21,7 +21,7 @@ const SwiperSlider = () => {
   useEffect(() => {
     const fetchData = async () => {
       await new Promise((resolve) => setTimeout(resolve, 0));
-      const response = await fetch(`${API_URL}title/updates?limit=5`);
+      const response = await fetch(`${API_URL}title/updates?limit=10`);
       const data = await response.json();
       setAnimeList(data.list);
     };

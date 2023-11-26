@@ -39,6 +39,7 @@ body::-webkit-scrollbar-track {
 }
 
 main {
+  min-height: calc(100vh - 24.8rem);
   margin: 5rem auto;
   padding: 0 2rem;
 }
@@ -277,7 +278,6 @@ main {
   align-items: center;
   flex-direction: column;
   gap: 5rem;
-  height: 70vh;
   font-family: "MontserratBold", sans-serif;
   font-size: 5rem;
 }

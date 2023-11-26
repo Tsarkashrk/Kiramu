@@ -49,6 +49,8 @@ body {
 }
 
 main {
+  min-height: calc(100vh - 24.8rem);
+
   margin: 5rem auto;
   padding: 0 2rem;
 }

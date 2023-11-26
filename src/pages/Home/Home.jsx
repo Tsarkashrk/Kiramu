@@ -11,7 +11,7 @@ const Home = () => {
       <main className="home">
         <HeroSection />
 
-        <Heading title="ВОЗМОЖНО, ВАМ ПОНРАВИТСЯ" description="Лучшие аниме на нашем сайте" />
+        <Heading title="ВОЗМОЖНО, ВАМ ПОНРАВИТСЯ" description="Новейшие аниме на нашем сайте" />
       </main>
 
       <SwiperSlider />
