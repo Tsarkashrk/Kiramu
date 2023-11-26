@@ -17,6 +17,10 @@
 
     transform: scale(0.9) !important;
 
+    &:hover {
+      background-color: $bg-color-lighter;
+    }
+
     &--active {
       background-color: $bg-color-lighter;
       transform: scale(1) !important;
@@ -25,9 +29,14 @@
 
   &__link {
     display: flex;
+
+    width: 100%;
   }
 
   &__image {
+    max-width: 35rem;
+    width: 100%;
+
     border: 1px solid $bg-color-light;
     border-radius: 2rem;
 
@@ -61,8 +70,8 @@
     color: $color-hover;
 
     -webkit-line-clamp: 6;
-    display: -webkit-box; /* Включаем флексбоксы */
-    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
     overflow: hidden;
   }
 

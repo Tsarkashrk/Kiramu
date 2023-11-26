@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 const Search = () => {
+  const [value, setValue] = useState(' ');
 
   return (
     <div className='search'>

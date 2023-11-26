@@ -1,6 +1,6 @@
-@charset "UTF-8";
 html {
   font-size: 62.5%;
+  background-color: #262626;
 }
 
 * {
@@ -12,6 +12,9 @@ html {
 }
 
 body {
+  max-width: 200rem;
+  width: 100%;
+  margin: 0 auto;
   background-color: #131313;
   color: #ffffff;
   text-rendering: optimizeSpeed;
@@ -281,6 +284,72 @@ main {
 
 .anime {
   max-width: 100rem;
+  width: 100%;
+}
+.anime__image {
+  max-width: 26rem;
+  width: 100%;
+  max-height: 37rem;
+  height: 100%;
+  border: 1px solid #262626;
+  border-radius: 2rem;
+}
+.anime__details {
+  display: flex;
+  gap: 4rem;
+}
+.anime__text {
+  font-family: "MontserratSemiBold", sans-serif;
+  font-size: 1.7rem;
+}
+.anime__title {
+  margin-bottom: 2rem;
+  font-family: "MontserratBold", sans-serif;
+  font-size: 2.4rem;
+  color: #ffffff;
+  line-height: 1.2;
+}
+.anime__description {
+  margin-top: 2rem;
+  font-family: "MontserratMedium", sans-serif;
+  font-size: 1.6rem;
+  color: #c0c0c0;
+  -webkit-line-clamp: 6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow-y: scroll;
+}
+.anime__description::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+.anime__description::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #393939;
+}
+.anime__description::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+.anime__series, .anime__genres {
+  color: #c0c0c0;
+}
+.anime__subtitle {
+  display: flex;
+  color: #ffffff;
+}
+.anime__year-section, .anime__status-section, .anime__series, .anime__genres {
+  display: flex;
+  gap: 0.5rem;
+}
+.anime__year {
+  color: #ffad31;
+}
+.anime__status {
+  color: #ffad31;
+}
+.anime__status--secondary {
+  color: #6f42c1;
 }
 
 .navigation {
@@ -591,14 +660,20 @@ main {
   transition: all 0.2s ease-in-out;
   transform: scale(0.9) !important;
 }
+.swiper__slide:hover {
+  background-color: #393939;
+}
 .swiper__slide--active {
   background-color: #393939;
   transform: scale(1) !important;
 }
 .swiper__link {
   display: flex;
+  width: 100%;
 }
 .swiper__image {
+  max-width: 35rem;
+  width: 100%;
   border: 1px solid #262626;
   border-radius: 2rem;
   filter: saturate(150%);
@@ -626,8 +701,8 @@ main {
   font-size: 1.7rem;
   color: #c0c0c0;
   -webkit-line-clamp: 6;
-  display: -webkit-box; /* Включаем флексбоксы */
-  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 .swiper__stats {
@@ -674,4 +749,22 @@ main {
 }
 .swiper__arrow {
   width: 2.5rem;
+}
+
+.iframe {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 10rem;
+  padding-top: 56.25%;
+  border-radius: 2rem;
+}
+.iframe__player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=main.css.map */

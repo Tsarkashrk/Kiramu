@@ -18,7 +18,7 @@ const Card = ({ animeList }) => {
               <div
                 name="card__status"
                 className={
-                  anime.player.episodes.last === anime.type.episodes
+                  anime.player.episodes.last !== anime.type.episodes
                     ? 'card__status'
                     : 'card__status card__status--secondary'
                 }>

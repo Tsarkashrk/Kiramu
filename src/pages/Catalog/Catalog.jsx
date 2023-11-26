@@ -15,7 +15,6 @@ const Catalog = () => {
       const response = await fetch(`${API_URL}title/updates?limit=100`);
       const data = await response.json();
       setAnimeList(data.list);
-      console.log(data.list);
       setLoading(false);
     };
 

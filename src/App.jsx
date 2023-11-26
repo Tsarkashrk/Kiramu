@@ -15,6 +15,7 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path="catalog" element={<Catalog />} />
         <Route path="anime/:code" element={<Anime />} />
+        <Route path="random" element={<Anime />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

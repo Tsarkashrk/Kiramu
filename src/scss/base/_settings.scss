@@ -1,5 +1,7 @@
 html {
   font-size: 62.5%;
+
+  background-color: $bg-color-light;
 }
 
 * {
@@ -13,6 +15,10 @@ html {
 }
 
 body {
+  max-width: 200rem;
+  width: 100%;
+
+  margin: 0 auto;
 
   background-color: $bg-color;
 
