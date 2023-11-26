@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Card = ({ animeList }) => {
+const Card = ({ animes }) => {
   const POSTER_URL = 'https://www.anilibria.tv';
 
   return (
     <div className="card__container">
-      {animeList.map((anime, i) => {
+      {animes.map((anime, i) => {
         return (
           <Link className="card" key={i} to={`/anime/${anime.code}`}>
             <img
@@ -22,7 +22,7 @@ const Card = ({ animeList }) => {
                     ? 'card__status'
                     : 'card__status card__status--secondary'
                 }>
-                {anime.player.episodes.last === anime.type.episodes ? 'Завершен' : 'Онгоинг'}
+                {anime.type.string === 'MOVIE' ? 'Завершен' : anime.player.episodes.last === anime.type.episodes ? 'Завершен' : 'Онгоинг'}
               </div>
               <div className="card__text">
                 <h2 className="card__title">{anime.names.ru}</h2>
@@ -30,7 +30,7 @@ const Card = ({ animeList }) => {
                   <p className="card__year">{anime.season.year} </p>
                   <p className="card__series">
                     {anime.player.episodes.last} из {''}
-                    {anime.type.episodes ? anime.type.episodes : '?'} эпизодов
+                    {anime.type.string === 'MOVIE' ? 1 : anime.type.episodes ? anime.type.episodes : '?'} эпизодов
                   </p>
                 </div>
               </div>

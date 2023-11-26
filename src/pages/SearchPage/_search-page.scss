@@ -1,0 +1,14 @@
+.search-page {
+  margin-top: 1.5rem;
+
+  line-height: 1;
+
+  &__title {
+    margin-bottom: 3rem;  
+
+    text-align: center;
+    font-family: $primary-font-medium;
+    font-size: $xs-font-size;
+    color: $color-hover;
+  }
+}

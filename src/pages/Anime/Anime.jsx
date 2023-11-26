@@ -14,7 +14,6 @@ const Anime = () => {
       const response = await fetch(`${API_URL}title?code=${code}`);
       const data = await response.json();
       setAnime(data);
-      console.log(data);
     } catch (error) {
       console.error('Error fetching anime by code:', error);
     }

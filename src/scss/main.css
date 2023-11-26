@@ -155,7 +155,7 @@ main {
 .hero-section__description {
   font-family: "MontserratMedium", sans-serif;
   font-size: 2rem;
-  color: #c0c0c0;
+  color: #cbcbcb;
 }
 
 .layout {
@@ -188,7 +188,7 @@ main {
   cursor: pointer;
 }
 .header__logo:hover {
-  color: #c0c0c0;
+  color: #cbcbcb;
 }
 
 .footer {
@@ -232,7 +232,7 @@ main {
   cursor: pointer;
 }
 .footer__logo:hover {
-  color: #c0c0c0;
+  color: #cbcbcb;
 }
 .footer__author {
   font-family: "MontserratMedium", sans-serif;
@@ -313,7 +313,7 @@ main {
   margin-top: 2rem;
   font-family: "MontserratMedium", sans-serif;
   font-size: 1.6rem;
-  color: #c0c0c0;
+  color: #cbcbcb;
   -webkit-line-clamp: 6;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -332,7 +332,7 @@ main {
   background-color: transparent;
 }
 .anime__series, .anime__genres {
-  color: #c0c0c0;
+  color: #cbcbcb;
 }
 .anime__subtitle {
   display: flex;
@@ -350,6 +350,18 @@ main {
 }
 .anime__status--secondary {
   color: #6f42c1;
+}
+
+.search-page {
+  margin-top: 1.5rem;
+  line-height: 1;
+}
+.search-page__title {
+  margin-bottom: 3rem;
+  text-align: center;
+  font-family: "MontserratMedium", sans-serif;
+  font-size: 1.6rem;
+  color: #cbcbcb;
 }
 
 .navigation {
@@ -409,7 +421,7 @@ main {
   transition: all 0.2s ease-in-out;
 }
 .button:hover {
-  background-color: #c0c0c0;
+  background-color: #cbcbcb;
 }
 .button--secondary {
   padding: 1rem 2rem;
@@ -436,6 +448,8 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   gap: 4rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
 .card {
@@ -502,7 +516,7 @@ main {
   gap: 1.5rem;
   font-family: "MontserratSemiBold", sans-serif;
   font-size: 1.4rem;
-  color: #c0c0c0;
+  color: #cbcbcb;
 }
 .card__year {
   color: #ffad31;
@@ -520,10 +534,10 @@ main {
   flex-direction: column;
   gap: 1rem;
 }
-
-.card__container {
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
+.card__genres {
+  font-family: "MontserratSemiBold", sans-serif;
+  font-size: 1.4rem;
+  color: #cbcbcb;
 }
 
 @keyframes fadeIn {
@@ -699,7 +713,7 @@ main {
 .swiper__description {
   font-family: "MontserratRegular", sans-serif;
   font-size: 1.7rem;
-  color: #c0c0c0;
+  color: #cbcbcb;
   -webkit-line-clamp: 6;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -710,7 +724,7 @@ main {
   flex-direction: column;
   font-family: "MontserratSemiBold", sans-serif;
   font-size: 1.7rem;
-  color: #c0c0c0;
+  color: #cbcbcb;
 }
 .swiper__subtitle {
   color: #ffffff;
@@ -721,7 +735,7 @@ main {
   color: #ffad31;
 }
 .swiper__genres {
-  color: #c0c0c0;
+  color: #cbcbcb;
 }
 .swiper__button--first, .swiper__button--second {
   position: absolute;
