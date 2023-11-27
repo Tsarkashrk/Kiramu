@@ -21,6 +21,28 @@
   &__text {
     font-family: $primary-font-semibold;
     font-size: 1.7rem;
+
+    max-height: 37rem;
+    height: 100%;
+
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+
+      border-radius: 10px;
+      background-color: transparent;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: $bg-color-lighter;
+    }
+    
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: transparent;
+    }
   }
 
   &__title {
@@ -38,26 +60,6 @@
     font-family: $primary-font-medium;
     font-size: $xs-font-size;
     color: $color-hover;
-
-    -webkit-line-clamp: 6;
-    display: -webkit-box; 
-    -webkit-box-orient: vertical; 
-    overflow-y: scroll;
-
-    &::-webkit-scrollbar {
-      width: 8px;
-      background-color: transparent;
-    }
-    
-    &::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      background-color: $bg-color-lighter;
-    }
-    
-    &::-webkit-scrollbar-track {
-      border-radius: 10px;
-      background-color: transparent;
-    }
   }
 
   &__series, &__genres {

@@ -6,17 +6,16 @@ import Preloader from '../../components/ui/Preloader/Preloader';
 import NotFound from '../NotFound/NotFound';
 
 const SearchPage = () => {
-  const [anime, setAnime] = useState({});
-  const params = useParams();
+  const API_URL = 'https://api.anilibria.tv/v3/';
 
+  const [anime, setAnime] = useState({});
   const [loading, setLoading] = useState(true);
 
-  const API_URL = 'https://api.anilibria.tv/v3/';
+  const params = useParams();
 
   const fetchAnime = async (text) => {
     const response = await fetch(`${API_URL}title/search?search=${text}&limit=-1`);
     const data = await response.json();
-    console.log(data.list);
     setAnime(data.list);
     setLoading(false);
   };
