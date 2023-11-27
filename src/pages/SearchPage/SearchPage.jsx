@@ -26,16 +26,10 @@ const SearchPage = () => {
   }, [params.text]);
 
   return (
-    <>
-      {anime.length == 0 ? (
-        <NotFound title="По вашему запросу найдено 0 аниме" />
-      ) : (
-        <main className="search-page">
-          <h1 className="search-page__title">По вашему запросу найдено {anime.length} аниме</h1>
-          {loading ? <Preloader /> : <Card animes={anime} />}
-        </main>
-      )}
-    </>
+    <main className="search-page">
+      <h1 className="search-page__title">По вашему запросу найдено {anime.length} аниме</h1>
+      {loading ? <Preloader /> : <Card animes={anime} />}
+    </main>
   );
 };
 
