@@ -4,6 +4,8 @@
 
   margin: 7rem 0 5rem;
 
+  animation: fadeIn 1s ease-in-out forwards;
+
   &__slide {
     height: 100%;
 
@@ -19,10 +21,13 @@
 
     &:hover {
       background-color: $bg-color-lighter;
+
+      .swiper__image {
+        filter: saturate(170%);
+      }
     }
 
     &--active {
-      background-color: $bg-color-lighter;
       transform: scale(1) !important;
     }
   }
@@ -40,7 +45,9 @@
     border: 1px solid $bg-color-light;
     border-radius: 2rem;
 
-    filter: saturate(150%);
+    filter: saturate(125%);
+
+    transition: $primary-transition;
   }
 
   &__details {
@@ -70,8 +77,8 @@
     color: $color-hover;
 
     -webkit-line-clamp: 6;
-    display: -webkit-box; 
-    -webkit-box-orient: vertical; 
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
     overflow: hidden;
   }
 
@@ -99,18 +106,19 @@
     color: $color-hover;
   }
 
-  &__button--first, &__button--second {
+  &__button--first,
+  &__button--second {
     position: absolute;
     top: calc(50% - 6rem);
 
-    padding: 2rem 1.3rem; 
+    padding: 2rem 1.3rem;
 
     border: none;
     border-radius: 1rem;
 
     -webkit-backdrop-filter: blur(13px);
     backdrop-filter: blur(15px);
-    background: hsla(258,4%,55%,.32);
+    background: hsla(258, 4%, 55%, 0.32);
 
     cursor: pointer;
 

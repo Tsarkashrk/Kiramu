@@ -4,11 +4,30 @@
   line-height: 1;
 
   &__title {
-    margin-bottom: 3rem;  
+    margin-bottom: 3rem;
 
     text-align: center;
     font-family: $primary-font-medium;
     font-size: $xs-font-size;
     color: $color-hover;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   }
 }

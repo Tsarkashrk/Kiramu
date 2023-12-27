@@ -11,19 +11,27 @@ const Catalog = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 0));
-      const response = await fetch(`${API_URL}title/updates?limit=100`);
-      const data = await response.json();
-      setAnimes(data.list);
-      setLoading(false);
+      try {
+        const response = await fetch(`${API_URL}title/updates?limit=50`);
+        const data = await response.json();
+        setAnimes(data.list);
+        console.log(data.list);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching anime:', error);
+      }
     };
 
     fetchData();
   }, []);
 
   return (
-    <main className="catalog">{loading ? <Preloader /> : <Card animes={animes} />}</main>
+    <main className="catalog">
+      <div className="search-page__container">
+        {loading ? <Preloader /> : <Card animes={animes} />}
+      </div>
+    </main>
   );
 };
 
-export default Catalog; 
+export default Catalog;

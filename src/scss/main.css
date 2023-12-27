@@ -286,6 +286,17 @@ main {
   max-width: 100rem;
   width: 100%;
 }
+.anime__container {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .anime__image {
   max-width: 26rem;
   width: 100%;
@@ -362,6 +373,27 @@ main {
   font-family: "MontserratMedium", sans-serif;
   font-size: 1.6rem;
   color: #cbcbcb;
+}
+.search-page__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.auth {
+  background-color: #262626;
+  font-family: "MontserratMedium", sans-serif;
 }
 
 .navigation {
@@ -441,15 +473,6 @@ main {
   font-family: "MontserratSemiBold", sans-serif;
   font-size: 1.6rem;
   color: #131313;
-}
-
-.card__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 4rem;
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
 }
 
 .card {
@@ -540,14 +563,6 @@ main {
   color: #cbcbcb;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .loader {
   display: flex;
   justify-content: center;
@@ -664,6 +679,7 @@ main {
   height: 100%;
   width: 100%;
   margin: 7rem 0 5rem;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 .swiper__slide {
   height: 100%;
@@ -677,8 +693,10 @@ main {
 .swiper__slide:hover {
   background-color: #393939;
 }
+.swiper__slide:hover .swiper__image {
+  filter: saturate(170%);
+}
 .swiper__slide--active {
-  background-color: #393939;
   transform: scale(1) !important;
 }
 .swiper__link {
@@ -690,7 +708,8 @@ main {
   width: 100%;
   border: 1px solid #262626;
   border-radius: 2rem;
-  filter: saturate(150%);
+  filter: saturate(125%);
+  transition: all 0.2s ease-in-out;
 }
 .swiper__details {
   display: flex;
@@ -771,7 +790,7 @@ main {
   width: 100%;
   margin-top: 10rem;
   padding-top: 56.25%;
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 .iframe__player {
   position: absolute;
