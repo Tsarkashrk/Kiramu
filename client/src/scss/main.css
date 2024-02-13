@@ -392,18 +392,57 @@ main {
 }
 
 .auth {
-  font-family: "MontserratMedium", sans-serif;
-  max-width: 40rem !important;
+  position: relative;
+  height: 80vh;
+  max-width: 35rem;
   width: 100%;
+  margin: auto;
+  text-align: center;
 }
 .auth__wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 4rem;
+  width: 100%;
+  padding: 4rem 2rem;
+  border-radius: 2.2rem;
   background-color: #262626;
 }
+.auth__title {
+  font-family: "MontserratMedium", sans-serif;
+}
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 .auth__input {
-  max-width: 40rem !important;
+  background-color: #131313 !important;
+}
+.auth__input::-webkit-input-placeholder {
+  color: #cbcbcb !important;
+}
+.auth__processess {
+  display: flex;
+  flex-direction: column;
+  font-family: "MontserratMedium", sans-serif;
+  font-size: 1.4rem;
+}
+.auth__button {
+  width: 100%;
+  margin-top: 2rem;
+}
+.auth__nav {
+  display: flex;
+  gap: 1rem;
+  align-self: center;
+  margin-top: 2rem;
+}
+.auth__link {
+  color: rgb(66, 94, 255);
 }
 
 .navigation {
