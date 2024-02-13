@@ -8,11 +8,11 @@ export const loginValidation = [
 export const registerValidation = [
   body("email", "Неверный формат почты").isEmail(),
   body("password", "Пароль должен состоять из 5 и более символов").isLength({ min: 5 }),
-  body("fullName", "Имя должно состоять из 2 и более символов").isLength({ min: 2 }),
+  body("username", "Имя должно состоять из 2 и более символов").isLength({ min: 2 }),
   body("avatarUrl", "Неверная ссылка на аватарку").optional().isURL(),
 ];
 
-export const postCreateValidation = [
+export const commentCreateValidation = [
   body("title", "Введите заголовок статьи").isLength({ min: 3 }).isString(),
   body("text", "Введите текст статьи").isLength({ min: 10 }).isString(),
   body("tags", "Неверный формат тэгов (укажите массив)").optional().isString(),

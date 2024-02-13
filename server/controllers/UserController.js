@@ -10,7 +10,7 @@ export const register = async (req, res) => {
   
     const doc = new UserSchema({
       email: req.body.email,
-      fullName: req.body.fullName,
+      username: req.body.username,
       avatarUrl: req.body.avatarUrl,
       passwordHash: hash,
     });
