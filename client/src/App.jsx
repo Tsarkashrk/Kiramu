@@ -7,10 +7,11 @@ import Catalog from './pages/Catalog/Catalog';
 import Anime from './pages/Anime/Anime';
 import NotFound from './pages/NotFound/NotFound';
 import SearchPage from './pages/SearchPage/SearchPage';
-import Auth from './pages/Auth/Auth';
+import Login from './pages/Auth/Login/Login';
+import Register from './pages/Auth/Register/Register';
 
 import Preloader from './components/ui/Preloader/Preloader';
-  
+
 const Home = lazy(() => import('./pages/Home/Home'));
 
 const App = () => {
@@ -29,7 +30,8 @@ const App = () => {
         <Route path="anime/:code" element={<Anime />} />
         <Route path="random" element={<Anime />} />
         <Route path="search/:text" element={<SearchPage />} />
-        <Route path="auth" element={<Auth />} />
+        <Route path="auth/register" element={<Register />} />
+        <Route path="auth/login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

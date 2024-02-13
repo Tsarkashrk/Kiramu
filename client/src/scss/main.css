@@ -392,8 +392,18 @@ main {
 }
 
 .auth {
-  background-color: #262626;
   font-family: "MontserratMedium", sans-serif;
+  max-width: 40rem !important;
+  width: 100%;
+}
+.auth__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #262626;
+}
+.auth__input {
+  max-width: 40rem !important;
 }
 
 .navigation {

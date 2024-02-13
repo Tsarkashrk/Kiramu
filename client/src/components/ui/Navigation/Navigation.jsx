@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
-const setActive = ({ isActive }) => isActive ? 'button button--secondary--active' : 'button button--secondary';
+const setActive = ({ isActive }) =>
+  isActive ? 'button button--secondary--active' : 'button button--secondary';
 
 const Navigation = () => {
-  let isAuth = false; 
+  let isAuth = false;
 
   const API_URL = 'https://api.anilibria.tv/v3/';
 
@@ -38,14 +39,16 @@ const Navigation = () => {
         to={`/anime/${anime.code}`}>
         Рандом
       </NavLink>
-      {!isAuth ? 
-      <NavLink
-        className="button button--secondary--active"
-        to="/auth"
-        onClick={handleRandomButtonClick}>
-        Авторизация
-      </NavLink> : ''
-      }
+      {!isAuth ? (
+        <NavLink
+          className="button button--secondary--active"
+          to="/auth/login"
+          onClick={handleRandomButtonClick}>
+          Войти
+        </NavLink>
+      ) : (
+        ''
+      )}
     </nav>
   );
 };

@@ -1,5 +1,18 @@
 .auth {
-  background-color: $bg-color-light;
-
   font-family: $primary-font-medium;
+
+  max-width: 40rem !important;
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: $bg-color-light;
+  }
+
+  &__input {
+    max-width: 40rem !important;
+  }
 }
