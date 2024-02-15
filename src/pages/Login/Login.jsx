@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const [error, setError] = useState('');
+
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -21,9 +25,10 @@ const Login = () => {
       const response = await axios.post('http://localhost:1000/auth/login', formData);
       const { token } = response.data;
       localStorage.setItem('token', token);
-      window.location.href = '/auth/me';
+      navigate('/profile');
     } catch (error) {
-      console.error(error.response.data.message);
+      setError(error.response.data);
+      console.error(error.response.data);
     }
   };
 
@@ -52,6 +57,19 @@ const Login = () => {
               onChange={handleChange}
             />
           </div>
+          {error && (
+            <div className="auth__error">
+              {Array.isArray(error) ? (
+                error.map((error, index) => (
+                  <p key={index} className="auth__error-message">
+                    * {error.msg}
+                  </p>
+                ))
+              ) : (
+                <p className="auth__error-message">* {error.message}</p>
+              )}
+            </div>
+          )}
           <div className="auth__processess">
             <button className="button button--secondary--active auth__button" type="submit">
               Войти

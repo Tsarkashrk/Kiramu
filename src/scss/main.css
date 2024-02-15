@@ -444,6 +444,16 @@ main {
 .auth__link {
   color: rgb(66, 94, 255);
 }
+.auth__error {
+  margin-top: 2rem !important;
+}
+.auth__error-message {
+  padding: 0.5rem;
+  font-family: "MontserratRegular", sans-serif;
+  font-size: 1.4rem;
+  color: red;
+  text-align: start;
+}
 
 .navigation {
   display: flex;

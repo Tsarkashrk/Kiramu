@@ -2,25 +2,25 @@
 
 $search-max-width: 100rem;
 
-// Padding 
+// Padding
 
 $buttons-padding: 1rem 2rem;
 
-// Border-radius 
+// Border-radius
 
 $border-radius: 10rem;
 
 // Font-family
 
-$primary-font-regular: "MontserratRegular", sans-serif;
-$primary-font-medium: "MontserratMedium", sans-serif;
-$primary-font-semibold: "MontserratSemiBold", sans-serif;
-$primary-font-bold: "MontserratBold", sans-serif;
+$primary-font-regular: 'MontserratRegular', sans-serif;
+$primary-font-medium: 'MontserratMedium', sans-serif;
+$primary-font-semibold: 'MontserratSemiBold', sans-serif;
+$primary-font-bold: 'MontserratBold', sans-serif;
 
-$secondary-font-regular: "PoppinsRegular", sans-serif;
-$secondary-font-medium: "PoppinsMedium", sans-serif;
-$secondary-font-semibold: "PoppinsSemiBold", sans-serif;
-$secondary-font-bold: "PoppinsBold", sans-serif;
+$secondary-font-regular: 'PoppinsRegular', sans-serif;
+$secondary-font-medium: 'PoppinsMedium', sans-serif;
+$secondary-font-semibold: 'PoppinsSemiBold', sans-serif;
+$secondary-font-bold: 'PoppinsBold', sans-serif;
 
 // Font-size
 
@@ -47,6 +47,10 @@ $color-ignore: #929292;
 
 $status-completed-color: #ffad31;
 $status-ongoing-color: #6f42c1;
+
+$error-color: red;
+$error-border-color: rgb(170, 4, 4);
+$error-bg-color: rgb(51, 21, 21);
 
 // Transition
 

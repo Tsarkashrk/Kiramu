@@ -5,8 +5,6 @@ const setActive = ({ isActive }) =>
   isActive ? 'button button--secondary--active' : 'button button--secondary';
 
 const Navigation = () => {
-  let isAuth = false;
-
   const API_URL = 'https://api.anilibria.tv/v3/';
 
   const [anime, setAnime] = useState({});
@@ -39,16 +37,9 @@ const Navigation = () => {
         to={`/anime/${anime.code}`}>
         Рандом
       </NavLink>
-      {!isAuth ? (
-        <NavLink
-          className="button button--secondary--active"
-          to="/auth/login"
-          onClick={handleRandomButtonClick}>
-          Войти
-        </NavLink>
-      ) : (
-        ''
-      )}
+      <NavLink className="button button--secondary--active" to="/auth/login">
+        Войти
+      </NavLink>
     </nav>
   );
 };
