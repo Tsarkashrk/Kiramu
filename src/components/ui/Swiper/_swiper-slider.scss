@@ -22,6 +22,8 @@
     &:hover {
       background-color: $bg-color-lighter;
 
+      transition: $primary-transition;
+
       .swiper__image {
         filter: saturate(170%);
       }
@@ -54,7 +56,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     padding: 3rem;
+
+    transition: $primary-transition;
   }
 
   &__text {

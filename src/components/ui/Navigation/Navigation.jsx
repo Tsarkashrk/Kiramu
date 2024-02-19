@@ -8,6 +8,7 @@ const setActive = ({ isActive }) =>
 
 const Navigation = () => {
   const [anime, setAnime] = useState({});
+  const [isAuthorized, setIsAuthorized] = useState(!!localStorage.getItem('token'));
 
   const fetchRandomAnime = async () => {
     const response = await fetch(`${anilibriaApi}title/random`);
@@ -21,6 +22,11 @@ const Navigation = () => {
 
   const handleRandomButtonClick = () => {
     fetchRandomAnime();
+  };
+
+  const handleLogOut = () => {
+    setIsAuthorized(false);
+    localStorage.removeItem('token');
   };
 
   return (

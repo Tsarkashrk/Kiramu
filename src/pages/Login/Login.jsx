@@ -61,12 +61,12 @@ const Login = () => {
             <div className="auth__error">
               {Array.isArray(error) ? (
                 error.map((error, index) => (
-                  <p key={index} className="auth__error-message">
+                  <p key={index} className="auth__message">
                     * {error.msg}
                   </p>
                 ))
               ) : (
-                <p className="auth__error-message">* {error.message}</p>
+                <p className="auth__message">* {error.message}</p>
               )}
             </div>
           )}

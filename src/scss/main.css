@@ -159,6 +159,72 @@ main {
   color: #cbcbcb;
 }
 
+.auth {
+  position: relative;
+  height: 80vh;
+  max-width: 35rem;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.auth__wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 100%;
+  padding: 4rem 2rem;
+  border-radius: 2.2rem;
+  background-color: #262626;
+}
+.auth__title {
+  font-family: "MontserratMedium", sans-serif;
+}
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.auth__input {
+  background-color: #131313 !important;
+}
+.auth__input::-webkit-input-placeholder {
+  color: #cbcbcb !important;
+}
+.auth__processess {
+  display: flex;
+  flex-direction: column;
+  font-family: "MontserratMedium", sans-serif;
+  font-size: 1.4rem;
+}
+.auth__button {
+  width: 100%;
+  margin-top: 2rem;
+}
+.auth__nav {
+  display: flex;
+  gap: 1rem;
+  align-self: center;
+  margin-top: 2rem;
+}
+.auth__link {
+  color: rgb(66, 94, 255);
+}
+.auth__error {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.auth__message {
+  font-family: "MontserratMedium", sans-serif;
+  font-size: 1.4rem;
+  color: red;
+  text-align: start;
+}
+
 .layout {
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
@@ -389,70 +455,6 @@ main {
   to {
     opacity: 1;
   }
-}
-
-.auth {
-  position: relative;
-  height: 80vh;
-  max-width: 35rem;
-  width: 100%;
-  margin: auto;
-  text-align: center;
-}
-.auth__wrapper {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  width: 100%;
-  padding: 4rem 2rem;
-  border-radius: 2.2rem;
-  background-color: #262626;
-}
-.auth__title {
-  font-family: "MontserratMedium", sans-serif;
-}
-.auth__form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.auth__input {
-  background-color: #131313 !important;
-}
-.auth__input::-webkit-input-placeholder {
-  color: #cbcbcb !important;
-}
-.auth__processess {
-  display: flex;
-  flex-direction: column;
-  font-family: "MontserratMedium", sans-serif;
-  font-size: 1.4rem;
-}
-.auth__button {
-  width: 100%;
-  margin-top: 2rem;
-}
-.auth__nav {
-  display: flex;
-  gap: 1rem;
-  align-self: center;
-  margin-top: 2rem;
-}
-.auth__link {
-  color: rgb(66, 94, 255);
-}
-.auth__error {
-  margin-top: 2rem !important;
-}
-.auth__error-message {
-  padding: 0.5rem;
-  font-family: "MontserratRegular", sans-serif;
-  font-size: 1.4rem;
-  color: red;
-  text-align: start;
 }
 
 .navigation {
@@ -751,6 +753,7 @@ main {
 }
 .swiper__slide:hover {
   background-color: #393939;
+  transition: all 0.2s ease-in-out;
 }
 .swiper__slide:hover .swiper__image {
   filter: saturate(170%);
@@ -775,6 +778,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   padding: 3rem;
+  transition: all 0.2s ease-in-out;
 }
 .swiper__text {
   display: flex;
