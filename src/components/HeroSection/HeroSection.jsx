@@ -2,7 +2,6 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Catalog from '../../pages/Catalog/Catalog';
-
 import Button from '../ui/Button/Button';
 
 const HeroSection = () => {
@@ -19,7 +18,7 @@ const HeroSection = () => {
           <Route path="/catalog" element={<Catalog />}></Route>
         </Routes>
 
-        <Button title="Начать смотреть" />
+        <Button title="Начать смотреть" navigation='/catalog' />
       </div>
     </div>
   );

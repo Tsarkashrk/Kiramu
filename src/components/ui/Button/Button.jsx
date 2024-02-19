@@ -4,9 +4,13 @@ import { NavLink } from 'react-router-dom';
 const Button = (props) => {
   return (
     <>
-      <NavLink to='/catalog' className='button'>{props.title}</NavLink>
+      <NavLink
+        to={props.navigation}
+        className={`button ${props.additionalClassName ? props.additionalClassName : ''}`}>
+        {props.title}
+      </NavLink>
     </>
-  ) 
-}
+  );
+};
 
 export default Button;

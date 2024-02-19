@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Card = ({ animes }) => {
-  const POSTER_URL = 'https://www.anilibria.tv';
+import { anilibriaUrl } from '../../../constants/api';
 
+const Card = ({ animes }) => {
   return (
     <>
       {animes.map((anime, i) => {
@@ -11,7 +11,7 @@ const Card = ({ animes }) => {
           <Link className="card" key={i} to={`/anime/${anime.code}`}>
             <img
               className="card__image"
-              src={`${POSTER_URL}/${anime.posters.medium.url}`}
+              src={`${anilibriaUrl}/${anime.posters.medium.url}`}
               alt="poster"
             />
             <div className="card__details">

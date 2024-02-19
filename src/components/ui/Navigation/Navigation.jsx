@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
+import { anilibriaApi } from '../../../constants/api';
+
 const setActive = ({ isActive }) =>
   isActive ? 'button button--secondary--active' : 'button button--secondary';
 
 const Navigation = () => {
-  const API_URL = 'https://api.anilibria.tv/v3/';
-
   const [anime, setAnime] = useState({});
 
   const fetchRandomAnime = async () => {
-    const response = await fetch(`${API_URL}title/random`);
+    const response = await fetch(`${anilibriaApi}title/random`);
     const data = await response.json();
     setAnime(data);
   };

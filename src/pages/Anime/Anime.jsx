@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import { anilibriaApi, litelibriaPostersApi } from '../../constants/api.js';
+
 import Iframe from '../../components/ui/Iframe/Iframe';
 import Preloader from '../../components/ui/Preloader/Preloader';
 
@@ -9,13 +11,10 @@ const Anime = () => {
   const [loading, setLoading] = useState(true);
   const params = useParams();
 
-  const API_URL = 'https://api.anilibria.tv/v3/';
-  const POSTER_URL = 'https://api.litelibria.com/posters/';
-
   useEffect(() => {
     const fetchAnimeByCode = async (code) => {
       try {
-        const response = await fetch(`${API_URL}title?code=${code}`);
+        const response = await fetch(`${anilibriaApi}title?code=${code}`);
         const data = await response.json();
         setAnime(data);
         setLoading(false);
@@ -35,7 +34,7 @@ const Anime = () => {
       ) : (
         <div className="anime__container">
           <div className="anime__details">
-            <img className="anime__image" src={`${POSTER_URL}${anime.id}`} alt="" />
+            <img className="anime__image" src={`${litelibriaPostersApi}${anime.id}`} alt="" />
             <div className="anime__text">
               <h1 className="anime__title">{anime.names && anime.names.ru}</h1>
               <div className="anime__year-section">

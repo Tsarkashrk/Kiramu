@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
+
+import { anilibriaApi } from '../../constants/api';
 
 import Card from '../../components/ui/Card/Card';
 import Preloader from '../../components/ui/Preloader/Preloader';
 
 const SearchPage = () => {
-  const API_URL = 'https://api.anilibria.tv/v3/';
-
   const [anime, setAnime] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
 
   const params = useParams();
@@ -17,7 +15,7 @@ const SearchPage = () => {
   useEffect(() => {
     const fetchAnime = async (text) => {
       try {
-        const response = await fetch(`${API_URL}title/search?search=${text}&limit=-1`);
+        const response = await fetch(`${anilibriaApi}title/search?search=${text}&limit=-1`);
         const data = await response.json();
         setAnime(data.list);
         setLoading(false);
