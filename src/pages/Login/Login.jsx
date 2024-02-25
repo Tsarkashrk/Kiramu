@@ -12,7 +12,7 @@ const Login = () => {
     password: '',
   });
 
-  const { email, password } = formData;
+  const { email, password } = formData
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
