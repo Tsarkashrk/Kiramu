@@ -9,7 +9,7 @@ const Profile = () => {
       try {
         const token = localStorage.getItem('token');
 
-        const response = await axios.get('http://localhost:1000/profile', {
+        const response = await axios.get(import.meta.env.VITE_SERVER_URL_PROFILE, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

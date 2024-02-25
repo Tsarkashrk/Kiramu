@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 import Layout from './components/layout/Layout';
 
@@ -16,7 +16,6 @@ import Preloader from './components/ui/Preloader/Preloader';
 const Home = lazy(() => import('./pages/Home/Home'));
 
 const App = () => {
-  console.log(localStorage.getItem('token'))
   return (
     <Routes>
       <Route path="/" element={<Layout />}>

@@ -22,7 +22,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:1000/auth/login', formData);
+      const response = await axios.post(import.meta.env.VITE_SERVER_URL_LOGIN, formData);
       const { token } = response.data;
       localStorage.setItem('token', token);
       navigate('/profile');

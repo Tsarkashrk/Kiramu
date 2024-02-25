@@ -22,7 +22,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:1000/auth/register', formData);
+      const response = await axios.post(import.meta.env.VITE_SERVER_URL_REGISTER, formData);
       navigate('/auth/login');
     } catch (error) {
       setError(error.response.data);
