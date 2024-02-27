@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const Login = () => {
+const Register = () => {
   const navigate = useNavigate();
-
   const [error, setError] = useState('');
 
   const [formData, setFormData] = useState({
+    username: '',
     email: '',
     password: '',
   });
 
-  const { email, password } = formData
+  const { username, email, password } = formData;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -22,10 +22,8 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(import.meta.env.VITE_SERVER_URL_LOGIN, formData);
-      const { token } = response.data;
-      localStorage.setItem('token', token);
-      navigate('/profile');
+      const response = await axios.post('http://localhost:1000/auth/register', formData);
+      navigate('/auth/login');
     } catch (error) {
       setError(error.response.data);
       console.error(error.response.data);
@@ -33,10 +31,20 @@ const Login = () => {
   };
 
   return (
-    <div className="auth">
+    <main className="auth">
       <div className="auth__wrapper">
-        <h1 className="auth__title">Вход</h1>
+        <h1 className="auth__title">Регистрация</h1>
         <form onSubmit={handleSubmit} className="auth__form">
+          <div className="auth__username">
+            <input
+              className="search__input auth__input"
+              type="text"
+              placeholder="Username"
+              name="username"
+              value={username}
+              onChange={handleChange}
+            />
+          </div>
           <div className="auth__email">
             <input
               className="search__input auth__input"
@@ -72,19 +80,19 @@ const Login = () => {
           )}
           <div className="auth__processess">
             <button className="button button--secondary--active auth__button" type="submit">
-              Войти
+              Зарегистрироваться
             </button>
             <div className="auth__nav">
-              Нет аккаунта?
-              <Link className="auth__link" to="/auth/register">
-                Зарегистрироваться
+              Есть аккаунт?
+              <Link className="auth__link" to="/auth/login">
+                Войти
               </Link>
             </div>
           </div>
         </form>
       </div>
-    </div>
+    </main>
   );
 };
 
-export default Login;
+export default Register;

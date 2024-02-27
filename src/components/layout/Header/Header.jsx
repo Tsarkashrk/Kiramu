@@ -6,8 +6,8 @@ import Navigation from '../../ui/Navigation/Navigation';
 
 const Header = () => {
   return (
-    <header className='header'>
-      <Link className='header__logo' to='/'>
+    <header className="header">
+      <Link className="header__logo" to="/">
         Kiramu
       </Link>
 

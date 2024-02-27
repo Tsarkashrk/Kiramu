@@ -8,7 +8,7 @@ const setActive = ({ isActive }) =>
 
 const Navigation = () => {
   const [anime, setAnime] = useState({});
-  const [isAuthorized, setIsAuthorized] = useState(!!localStorage.getItem('token'));
+  const [isAuth, setIsAuth] = useState(localStorage.getItem('token'));
 
   const fetchRandomAnime = async () => {
     const response = await fetch(`${anilibriaApi}title/random`);
@@ -20,13 +20,8 @@ const Navigation = () => {
     fetchRandomAnime();
   }, []);
 
-  const handleRandomButtonClick = () => {
+  const handleRandomAnime = () => {
     fetchRandomAnime();
-  };
-
-  const handleLogOut = () => {
-    setIsAuthorized(false);
-    localStorage.removeItem('token');
   };
 
   return (
@@ -39,13 +34,23 @@ const Navigation = () => {
       </NavLink>
       <NavLink
         className="button button--secondary"
-        onClick={handleRandomButtonClick}
+        onClick={handleRandomAnime}
         to={`/anime/${anime.code}`}>
         Рандом
       </NavLink>
-      <NavLink className="button button--secondary--active" to="/auth/login">
-        Войти
-      </NavLink>
+      {!isAuth ? (
+        <NavLink className="button button--secondary--active" to="/auth/login">
+          Войти
+        </NavLink>
+      ) : (
+        <NavLink to="/profile">
+          <img
+            className="navigation__profile"
+            src="images/msg853484107-62724.jpg"
+            alt="profile-image"
+          />
+        </NavLink>
+      )}
     </nav>
   );
 };

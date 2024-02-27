@@ -1,4 +1,12 @@
 .navigation {
   display: flex;
   gap: 1rem;
+  max-height: 4.4rem;
+  height: 100%;
+
+  &__profile {
+    max-width: 4.4rem;
+    width: 100%;
+    border-radius: 100%;
+  }
 }

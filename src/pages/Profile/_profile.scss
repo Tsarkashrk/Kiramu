@@ -1,0 +1,73 @@
+.profile {
+  &__background {
+    width: 100%;
+    border-radius: 2rem;
+    background-image: url('/images/nebo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 2rem;
+    backdrop-filter: blur(5px);
+  }
+
+  &__picture {
+    max-width: 20rem;
+    width: 100%;
+    border: 1px solid $bg-color-lighter;
+    border-radius: 100%;
+  }
+
+  &__details {
+    width: 100%;
+    padding: 1.5rem 3rem;
+  }
+
+  &__username {
+    font-family: $secondary-font-medium;
+    font-size: $lg-font-size;
+  }
+
+  &__bio {
+    font-family: $primary-font-regular;
+    font-size: $xs-font-size;
+    color: $color-hover;
+  }
+
+  &__button {
+    border: 1px solid $bg-color-lighter !important;
+    background-color: $bg-color-light !important;
+    color: rgb(0, 169, 0) !important;
+
+    &:hover {
+      background-color: rgb(0, 169, 0) !important;
+      color: $color-active !important;
+    }
+
+    &--secondary {
+      color: red !important;
+
+      &:hover {
+        background-color: red !important;
+        color: $color-active !important;
+      }
+    }
+  }
+
+  &__textarea {
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: $bg-color-light;
+    font-family: $secondary-font-regular;
+    font-size: $xs-font-size;
+    color: $color-active;
+  }
+}

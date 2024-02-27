@@ -159,72 +159,6 @@ main {
   color: #cbcbcb;
 }
 
-.auth {
-  position: relative;
-  height: 80vh;
-  max-width: 35rem;
-  width: 100%;
-  margin: auto;
-  text-align: center;
-}
-.auth__wrapper {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  width: 100%;
-  padding: 4rem 2rem;
-  border-radius: 2.2rem;
-  background-color: #262626;
-}
-.auth__title {
-  font-family: "MontserratMedium", sans-serif;
-}
-.auth__form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.auth__input {
-  background-color: #131313 !important;
-}
-.auth__input::-webkit-input-placeholder {
-  color: #cbcbcb !important;
-}
-.auth__processess {
-  display: flex;
-  flex-direction: column;
-  font-family: "MontserratMedium", sans-serif;
-  font-size: 1.4rem;
-}
-.auth__button {
-  width: 100%;
-  margin-top: 2rem;
-}
-.auth__nav {
-  display: flex;
-  gap: 1rem;
-  align-self: center;
-  margin-top: 2rem;
-}
-.auth__link {
-  color: rgb(66, 94, 255);
-}
-.auth__error {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-top: 2rem;
-}
-.auth__message {
-  font-family: "MontserratMedium", sans-serif;
-  font-size: 1.4rem;
-  color: red;
-  text-align: start;
-}
-
 .layout {
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
@@ -457,9 +391,144 @@ main {
   }
 }
 
+.auth {
+  position: relative;
+  height: 80vh;
+  max-width: 35rem;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.auth__wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 100%;
+  padding: 4rem 2rem;
+  border-radius: 2.2rem;
+  background-color: #262626;
+}
+.auth__title {
+  font-family: "MontserratMedium", sans-serif;
+}
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.auth__input {
+  background-color: #131313 !important;
+}
+.auth__input::-webkit-input-placeholder {
+  color: #cbcbcb !important;
+}
+.auth__processess {
+  display: flex;
+  flex-direction: column;
+  font-family: "MontserratMedium", sans-serif;
+  font-size: 1.4rem;
+}
+.auth__button {
+  width: 100%;
+  margin-top: 2rem;
+}
+.auth__nav {
+  display: flex;
+  gap: 1rem;
+  align-self: center;
+  margin-top: 2rem;
+}
+.auth__link {
+  color: rgb(66, 94, 255);
+}
+.auth__error {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.auth__message {
+  font-family: "MontserratMedium", sans-serif;
+  font-size: 1.4rem;
+  color: red;
+  text-align: start;
+}
+
+.profile__background {
+  width: 100%;
+  border-radius: 2rem;
+  background-image: url("/images/nebo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.profile__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(5px);
+}
+.profile__picture {
+  max-width: 20rem;
+  width: 100%;
+  border: 1px solid #393939;
+  border-radius: 100%;
+}
+.profile__details {
+  width: 100%;
+  padding: 1.5rem 3rem;
+}
+.profile__username {
+  font-family: "PoppinsMedium", sans-serif;
+  font-size: 2.8rem;
+}
+.profile__bio {
+  font-family: "MontserratRegular", sans-serif;
+  font-size: 1.6rem;
+  color: #cbcbcb;
+}
+.profile__button {
+  border: 1px solid #393939 !important;
+  background-color: #262626 !important;
+  color: rgb(0, 169, 0) !important;
+}
+.profile__button:hover {
+  background-color: rgb(0, 169, 0) !important;
+  color: #ffffff !important;
+}
+.profile__button--secondary {
+  color: red !important;
+}
+.profile__button--secondary:hover {
+  background-color: red !important;
+  color: #ffffff !important;
+}
+.profile__textarea {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #262626;
+  font-family: "PoppinsRegular", sans-serif;
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
 .navigation {
   display: flex;
   gap: 1rem;
+  max-height: 4.4rem;
+  height: 100%;
+}
+.navigation__profile {
+  max-width: 4.4rem;
+  width: 100%;
+  border-radius: 100%;
 }
 
 .search {
@@ -764,6 +833,7 @@ main {
 .swiper__link {
   display: flex;
   width: 100%;
+  transition: all 0.2s ease-in-out;
 }
 .swiper__image {
   max-width: 35rem;
