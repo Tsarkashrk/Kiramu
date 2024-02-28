@@ -1,7 +1,6 @@
-.footer { 
+.footer {
   @include d-flex-prm;
-
-  padding: 1.5rem 2rem;
+  padding: 5rem 2rem 1.5rem;
 
   &__rights {
     display: flex;
@@ -27,12 +26,12 @@
 
   &__project {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: left;
-    flex-direction: column;
-    gap: 4rem;
+    align-items: center;
+    gap: 20rem;
 
-    width: 30rem;
+    width: 100%;
   }
 
   &__logo {
@@ -55,7 +54,7 @@
     font-size: $xs-font-size;
     color: $color-ignore;
   }
-  
+
   &__contacts {
     @include d-flex-prm;
     flex-direction: column;
@@ -76,7 +75,7 @@
       color: $color-ignore;
     }
 
-    >ion-icon {
+    > ion-icon {
       font-size: 6rem;
 
       transition: $primary-transition;

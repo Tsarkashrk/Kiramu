@@ -2,17 +2,17 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className='footer'>
-      <div className='footer__project'>
-        <h2 className='footer__logo'>Kiramu</h2>
-        <div className='footer__author'>
+    <footer className="footer">
+      <div className="footer__project">
+        <h2 className="footer__logo">Kiramu</h2>
+        <div className="footer__author">
           © Copyright Kiramu 2023
           <br></br>
           Developed by: tsarka
         </div>
       </div>
 
-      <div className='footer__contacts'>
+      {/* <div className='footer__contacts'>
         <div className='footer__links'>
           <a className="footer__link" href="https://github.com/Tsarkashrk" target='_blank'>
             <ion-icon name='logo-github'></ion-icon>
@@ -27,16 +27,16 @@ const Footer = () => {
             <ion-icon name='paper-plane'></ion-icon>
           </a>
         </div>
-      </div>
+      </div> */}
 
-      <div className='footer__rights'>
+      {/* <div className='footer__rights'>
         <h2 className='footer__title'>Права</h2>
         <p className='footer__description'>
           Весь материал на сайте предназначен исключительно для бесплатного домашнего ознакомительного просмотра.
         </p>
-      </div>
+      </div> */}
     </footer>
-  )
-}
+  );
+};
 
 export default Footer;

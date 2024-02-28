@@ -5,6 +5,8 @@ import { anilibriaApi, litelibriaPostersApi } from '../../constants/api.js';
 
 import Iframe from '../../components/ui/Iframe/Iframe';
 import Preloader from '../../components/ui/Preloader/Preloader';
+import Heading from '../../components/Heading/Heading.jsx';
+import Comments from '../../components/Comments/Comments.jsx';
 
 const Anime = () => {
   const [anime, setAnime] = useState({});
@@ -79,6 +81,8 @@ const Anime = () => {
             </div>
           </div>
           <Iframe anime={anime} />
+
+          <Comments />
         </div>
       )}
     </main>

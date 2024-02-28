@@ -1,0 +1,58 @@
+.comments {
+  margin-top: 10rem;
+
+  &__header {
+    font-family: $primary-font-bold;
+    font-size: $lg-font-size;
+  }
+
+  &__input {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid $bg-color-lighter;
+    border-radius: 10rem;
+    background-color: $bg-color-light;
+    font-family: $secondary-font-regular;
+    font-size: $xs-font-size;
+    color: $color-active;
+  }
+
+  &__add {
+    position: relative;
+    margin-top: 2rem;
+
+    ion-icon {
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      font-size: $xl-font-size;
+      color: $color-ignore;
+      transform: translateY(-50%);
+      cursor: pointer;
+      transition: $primary-transition;
+
+      &:hover {
+        color: $color-active;
+      }
+    }
+  }
+
+  &__attention {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    color: $color-ignore;
+
+    ion-icon {
+      font-size: $xl-font-size;
+    }
+  }
+
+  &__warning {
+    font-family: $primary-font-medium;
+    font-size: $xs-font-size;
+  }
+}

@@ -8,10 +8,12 @@
   }
 
   &__wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 20rem;
     width: 100%;
     margin: 0 auto;
     padding: 3rem;
@@ -20,15 +22,25 @@
   }
 
   &__picture {
-    max-width: 20rem;
+    position: absolute;
+    top: 12.5rem;
+    max-width: 15rem;
     width: 100%;
-    border: 1px solid $bg-color-lighter;
+    border: 3px solid $bg-color;
     border-radius: 100%;
   }
 
   &__details {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    max-width: 40rem;
     width: 100%;
     padding: 1.5rem 3rem;
+    margin: 7rem auto;
+    text-align: center;
   }
 
   &__username {
@@ -43,6 +55,9 @@
   }
 
   &__button {
+    max-height: 4.6rem !important;
+    height: 100% !important;
+    margin-top: 1rem;
     border: 1px solid $bg-color-lighter !important;
     background-color: $bg-color-light !important;
     color: rgb(0, 169, 0) !important;
@@ -62,12 +77,26 @@
     }
   }
 
-  &__textarea {
+  &__edit {
+    position: absolute;
+    top: 23rem;
+    margin-left: 10rem;
+    padding: 0.75rem 1rem !important;
+    border: 1px solid $bg-color-lighter !important;
+  }
+
+  &__input {
+    margin-top: 1rem;
     padding: 1rem;
-    border-radius: 1rem;
+    border: 1px solid $bg-color-lighter;
+    border-radius: 10rem;
     background-color: $bg-color-light;
     font-family: $secondary-font-regular;
     font-size: $xs-font-size;
     color: $color-active;
+  }
+
+  ion-icon {
+    font-size: 2.5rem;
   }
 }

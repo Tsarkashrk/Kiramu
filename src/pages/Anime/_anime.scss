@@ -46,12 +46,12 @@
       border-radius: 10px;
       background-color: transparent;
     }
-    
+
     &::-webkit-scrollbar-thumb {
       border-radius: 10px;
       background-color: $bg-color-lighter;
     }
-    
+
     &::-webkit-scrollbar-track {
       border-radius: 10px;
       background-color: transparent;
@@ -75,7 +75,8 @@
     color: $color-hover;
   }
 
-  &__series, &__genres {
+  &__series,
+  &__genres {
     color: $color-hover;
   }
 
@@ -84,7 +85,10 @@
     color: $color-active;
   }
 
-  &__year-section, &__status-section, &__series, &__genres {
+  &__year-section,
+  &__status-section,
+  &__series,
+  &__genres {
     display: flex;
     gap: 0.5rem;
   }

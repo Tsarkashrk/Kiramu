@@ -196,7 +196,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
+  padding: 5rem 2rem 1.5rem;
 }
 .footer__rights {
   display: flex;
@@ -218,11 +218,11 @@ main {
 }
 .footer__project {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: left;
-  flex-direction: column;
-  gap: 4rem;
-  width: 30rem;
+  align-items: center;
+  gap: 20rem;
+  width: 100%;
 }
 .footer__logo {
   font-family: "PoppinsBold", sans-serif;
@@ -465,10 +465,12 @@ main {
   background-size: cover;
 }
 .profile__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 20rem;
   width: 100%;
   margin: 0 auto;
   padding: 3rem;
@@ -476,14 +478,24 @@ main {
   backdrop-filter: blur(5px);
 }
 .profile__picture {
-  max-width: 20rem;
+  position: absolute;
+  top: 12.5rem;
+  max-width: 15rem;
   width: 100%;
-  border: 1px solid #393939;
+  border: 3px solid #131313;
   border-radius: 100%;
 }
 .profile__details {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  max-width: 40rem;
   width: 100%;
   padding: 1.5rem 3rem;
+  margin: 7rem auto;
+  text-align: center;
 }
 .profile__username {
   font-family: "PoppinsMedium", sans-serif;
@@ -495,6 +507,9 @@ main {
   color: #cbcbcb;
 }
 .profile__button {
+  max-height: 4.6rem !important;
+  height: 100% !important;
+  margin-top: 1rem;
   border: 1px solid #393939 !important;
   background-color: #262626 !important;
   color: rgb(0, 169, 0) !important;
@@ -510,13 +525,25 @@ main {
   background-color: red !important;
   color: #ffffff !important;
 }
-.profile__textarea {
+.profile__edit {
+  position: absolute;
+  top: 23rem;
+  margin-left: 10rem;
+  padding: 0.75rem 1rem !important;
+  border: 1px solid #393939 !important;
+}
+.profile__input {
+  margin-top: 1rem;
   padding: 1rem;
-  border-radius: 1rem;
+  border: 1px solid #393939;
+  border-radius: 10rem;
   background-color: #262626;
   font-family: "PoppinsRegular", sans-serif;
   font-size: 1.6rem;
   color: #ffffff;
+}
+.profile ion-icon {
+  font-size: 2.5rem;
 }
 
 .navigation {
@@ -529,6 +556,57 @@ main {
   max-width: 4.4rem;
   width: 100%;
   border-radius: 100%;
+}
+
+.comments {
+  margin-top: 10rem;
+}
+.comments__header {
+  font-family: "MontserratBold", sans-serif;
+  font-size: 2.8rem;
+}
+.comments__input {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #393939;
+  border-radius: 10rem;
+  background-color: #262626;
+  font-family: "PoppinsRegular", sans-serif;
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+.comments__add {
+  position: relative;
+  margin-top: 2rem;
+}
+.comments__add ion-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  font-size: 3rem;
+  color: #929292;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.comments__add ion-icon:hover {
+  color: #ffffff;
+}
+.comments__attention {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  color: #929292;
+}
+.comments__attention ion-icon {
+  font-size: 3rem;
+}
+.comments__warning {
+  font-family: "MontserratMedium", sans-serif;
+  font-size: 1.6rem;
 }
 
 .search {
