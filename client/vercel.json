@@ -1,0 +1,32 @@
+{
+  "routes": [
+    {
+      "src": "/api/auth/register",
+      "dest": "https://kiramu.vercel.app/api/auth/register"
+    },
+    {
+      "src": "/api/auth/login",
+      "dest": "https://kiramu.vercel.app/api/auth/login"
+    },
+    {
+      "src": "/api/anime/:animeCode/comments",
+      "dest": "https://kiramu.vercel.app/api/anime/:animeCode/comments"
+    },
+    {
+      "src": "/api/profile",
+      "dest": "https://kiramu.vercel.app/api/profile"
+    },
+    {
+      "src": "/api/profile/favorites",
+      "dest": "https://kiramu.vercel.app/api/profile/favorites"
+    },
+    {
+      "src": "/api/anime/:animeCode/check",
+      "dest": "https://kiramu.vercel.app/api/anime/:animeCode/check"
+    },
+    {
+      "src": "/api/anime/:animeCode",
+      "dest": "https://kiramu.vercel.app/api/anime/:animeCode"
+    }
+  ]
+}
