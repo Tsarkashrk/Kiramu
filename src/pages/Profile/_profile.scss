@@ -44,7 +44,7 @@
   }
 
   &__username {
-    font-family: $secondary-font-medium;
+    font-family: $primary-font-medium;
     font-size: $lg-font-size;
   }
 
@@ -91,7 +91,7 @@
     border: 1px solid $bg-color-lighter;
     border-radius: 10rem;
     background-color: $bg-color-light;
-    font-family: $secondary-font-regular;
+    font-family: $primary-font-regular;
     font-size: $xs-font-size;
     color: $color-active;
   }

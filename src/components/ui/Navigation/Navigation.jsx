@@ -46,7 +46,7 @@ const Navigation = () => {
         <NavLink to="/profile">
           <img
             className="navigation__profile"
-            src="images/msg853484107-62724.jpg"
+            src="/images/msg853484107-62724.jpg"
             alt="profile-image"
           />
         </NavLink>

@@ -1,0 +1,41 @@
+.favorites {
+  &__list {
+    display: flex;
+    gap: 4rem;
+    margin-top: 5rem;
+  }
+
+  &__item {
+    max-width: 26rem;
+    width: 100%;
+    background-color: $bg-color-light;
+    border-radius: 2rem;
+    transition: $primary-transition;
+
+    &:hover {
+      background-color: $bg-color-lighter;
+    }
+  }
+
+  &__image {
+    max-height: 37rem;
+    height: 100%;
+
+    filter: saturate(150%);
+
+    border: 1px solid $bg-color-light;
+    border-radius: 2rem;
+
+    transition: $primary-transition;
+  }
+
+  &__title {
+    margin: 2rem;
+    font-family: $primary-font-semibold;
+    font-size: $xs-font-size;
+    color: $color-active;
+    line-height: 1.2;
+
+    transition: $primary-transition;
+  }
+}

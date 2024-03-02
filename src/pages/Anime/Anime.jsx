@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-
 import { anilibriaApi, litelibriaPostersApi } from '../../constants/api.js';
-
 import Iframe from '../../components/ui/Iframe/Iframe';
 import Preloader from '../../components/ui/Preloader/Preloader';
-import Heading from '../../components/Heading/Heading.jsx';
 import Comments from '../../components/Comments/Comments.jsx';
+import FavoriteButton from '../../components/ui/FavoriteButton/FavoriteButton.jsx';
 
 const Anime = () => {
   const [anime, setAnime] = useState({});
@@ -82,7 +80,15 @@ const Anime = () => {
           </div>
           <Iframe anime={anime} />
 
-          <Comments />
+          <FavoriteButton
+            animeCode={anime.code}
+            animeId={anime.id}
+            animeName={anime.names.ru || anime.names.en}
+            animeLink={`https://localhost:3000/anime/${anime.code}`}
+            animeImg={`${litelibriaPostersApi}${anime.id}`}
+          />
+
+          <Comments animeId={anime.id} animeCode={anime.code} />
         </div>
       )}
     </main>

@@ -12,6 +12,8 @@
 
 @import '../components/Heading/heading';
 @import '../components/HeroSection/hero-section';
+@import '../components/Comments/comments';
+@import '../components/Favorites/favorites';
 
 // Layout
 
@@ -31,7 +33,7 @@
 // UI
 
 @import '../components/ui/Navigation/navigation';
-@import '../components/ui/Comments/comments';
+@import '../components/ui/FavoriteButton/favorite-btn';
 @import '../components/ui/Search/search';
 @import '../components/ui/Button/button';
 @import '../components/ui/Card/card';

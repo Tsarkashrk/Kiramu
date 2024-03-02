@@ -1,0 +1,19 @@
+.favorite-btn {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  border-radius: 1rem !important;
+  gap: 1rem;
+  margin-top: 2rem;
+  line-height: 110%;
+
+  &--secondary {
+    background-color: $color-active !important;
+    color: $bg-color !important;
+
+    &:hover {
+      color: $bg-color-light !important;
+      background-color: $color-hover !important;
+    }
+  }
+}

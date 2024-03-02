@@ -8,5 +8,7 @@
     max-width: 4.4rem;
     width: 100%;
     border-radius: 100%;
+    border: 2px solid $status-ongoing-color;
+    box-shadow: 0 0 4px $status-ongoing-color;
   }
 }
