@@ -21,7 +21,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://kiramu.vercel.app/api/auth/login', formData);
+      const response = await axios.post('https://kiramu.vercel.app/api/auth/login', formData);
       const { token } = response.data;
       localStorage.setItem('token', token);
       navigate('/profile');

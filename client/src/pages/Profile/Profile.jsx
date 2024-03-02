@@ -13,7 +13,7 @@ const Profile = () => {
       try {
         const token = localStorage.getItem('token');
 
-        const response = await axios.get('http://kiramu.vercel.app/api/profile', {
+        const response = await axios.get('https://kiramu.vercel.app/api/profile', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -37,7 +37,7 @@ const Profile = () => {
       const token = localStorage.getItem('token');
 
       await axios.patch(
-        'http://kiramu.vercel.app/api/profile',
+        'https://kiramu.vercel.app/api/profile',
         { bio },
         {
           headers: {

@@ -13,7 +13,7 @@ const FavoritesComponent = () => {
       try {
         const token = localStorage.getItem('token');
 
-        const response = await fetch('http://kiramu.vercel.app/api/profile/favorites', {
+        const response = await fetch('https://kiramu.vercel.app/api/profile/favorites', {
           method: 'GET',
           headers: {
             Authorization: `Bearer ${token}`,
