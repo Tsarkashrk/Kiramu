@@ -40,10 +40,4 @@ app.patch('/api/profile', checkAuth, UserController.updateProfile);
 
 app.delete('/api/anime/:animeCode/', checkAuth, FavoriteController.removeFavorite);
 
-app.listen(1000, (err) => {
-  if (err) {
-    return console.log(err);
-  }
-
-  console.log('Server is running on port 1000');
-});
+export default app;
