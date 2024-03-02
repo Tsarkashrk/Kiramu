@@ -13,7 +13,7 @@ const Profile = () => {
       try {
         const token = localStorage.getItem('token');
 
-        const response = await axios.get('http://localhost:1000/profile', {
+        const response = await axios.get('http://localhost:1000/api/profile', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -37,7 +37,7 @@ const Profile = () => {
       const token = localStorage.getItem('token');
 
       await axios.patch(
-        'http://localhost:1000/profile',
+        'http://localhost:1000/api/profile',
         { bio },
         {
           headers: {
