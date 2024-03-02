@@ -7,7 +7,7 @@ const FavoriteButton = ({ animeCode, animeId, animeImg, animeLink, animeName }) 
     const checkFavoriteStatus = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch(`http://localhost:1000/api/anime/${animeCode}/check`, {
+        const response = await fetch(`http://kiramu.vercel.app/api/anime/${animeCode}/check`, {
           method: 'GET',
           headers: {
             Authorization: `Bearer ${token}`,
@@ -28,7 +28,7 @@ const FavoriteButton = ({ animeCode, animeId, animeImg, animeLink, animeName }) 
   const addFavorite = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:1000/api/anime/${animeCode}`, {
+      const response = await fetch(`http://kiramu.vercel.app/api/anime/${animeCode}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ const FavoriteButton = ({ animeCode, animeId, animeImg, animeLink, animeName }) 
   const removeFavorite = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:1000/api/anime/${animeCode}`, {
+      const response = await fetch(`http://kiramu.vercel.app/api/anime/${animeCode}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,

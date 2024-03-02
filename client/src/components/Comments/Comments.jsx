@@ -11,7 +11,7 @@ const Comments = ({ animeId, animeCode }) => {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const response = await fetch(`http://localhost:1000/api/anime/${animeCode}/comments`);
+        const response = await fetch(`http://kiramu.vercel.app/api/anime/${animeCode}/comments`);
         const data = await response.json();
 
         if (!response.ok) {
@@ -49,7 +49,7 @@ const Comments = ({ animeId, animeCode }) => {
   const handleCommentSubmit = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:1000/api/anime/${animeCode}/comments`, {
+      const response = await fetch(`http://kiramu.vercel.app/api/anime/${animeCode}/comments`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
