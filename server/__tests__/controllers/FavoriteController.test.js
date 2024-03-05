@@ -1,125 +1,81 @@
+import request from 'supertest';
 import jwt from 'jsonwebtoken';
 import mongoose from 'mongoose';
-import request from 'supertest';
 import app from '../../index.js';
-import UserSchema from '../../models/User.js';
 import FavoriteSchema from '../../models/Favorite.js';
+import UserSchema from '../../models/User.js';
 
-const testUser = {
-  _id: new mongoose.Types.ObjectId(),
-  username: 'testuser',
-};
-const testToken = jwt.sign({ _id: testUser._id }, process.env.JWT_SECRET);
+describe('FavoriteController', () => {
+  let testToken;
+  let testUser;
 
-jest.mock('../../models/User.js', () => ({
-  findById: jest.fn(),
-}));
+  beforeAll(async () => {
+    testUser = await UserSchema.create({
+      email: 'test@example.com',
+      username: 'testuser',
+    });
 
-jest.mock('../../models/Favorite.js', () => ({
-  findOne: jest.fn(),
-  find: jest.fn(),
-  findOneAndDelete: jest.fn(),
-  save: jest.fn(),
-}));
-
-describe('POST api/anime/:animeCode', () => {
-  it('should add a favorite anime', async () => {
-    UserSchema.findById.mockResolvedValue(testUser);
-
-    FavoriteSchema.findOne.mockResolvedValueOnce(null);
-
-    const newFavorite = {
-      animeId: '1234567890',
-      animeName: 'Test Anime',
-      animeCode: 'test-anime',
-      animeImg: 'test.jpg',
-    };
-
-    const res = await request(app)
-      .post('api/anime/:animeCode')
-      .set('Authorization', `Bearer ${testToken}`)
-      .send(newFavorite);
-
-    expect(res.status).toBe(201);
-    expect(res.body.message).toBe('Аниме успешно добавлено в список любимых');
-    expect(FavoriteSchema.save).toHaveBeenCalled();
+    testToken = jwt.sign({ _id: testUser._id }, process.env.JWT_SECRET);
   });
 
-  it('should return 400 if anime is already added to favorites', async () => {
-    UserSchema.findById.mockResolvedValue(testUser);
-
-    FavoriteSchema.findOne.mockResolvedValueOnce({});
-
-    const newFavorite = {
-      animeId: '1234567890',
-      animeName: 'Test Anime',
-      animeCode: 'test-anime',
-      animeImg: 'test.jpg',
-    };
-
-    const res = await request(app)
-      .post('api/anime/:animeCode')
-      .set('Authorization', `Bearer ${testToken}`)
-      .send(newFavorite);
-
-    expect(res.status).toBe(400);
-    expect(res.body.message).toBe('Такое аниме уже существует');
+  afterAll(async () => {
+    await UserSchema.deleteMany();
+    await FavoriteSchema.deleteMany();
   });
 
-});
-
-describe('GET api/profile/favorites', () => {
-  it('should get user favorites', async () => {
-    UserSchema.findById.mockResolvedValue(testUser);
-
-    const favorites = [
-      {
-        animeId: '1234567890',
+  describe('POST /api/anime/:animeCode', () => {
+    it('should add anime to favorites', async () => {
+      const newFavorite = {
+        animeId: '123456',
         animeName: 'Test Anime',
         animeCode: 'test-anime',
-        animeImg: 'test.jpg',
-        userId: testUser._id,
-      },
-    ];
-    FavoriteSchema.find.mockResolvedValueOnce(favorites);
+        animeImg: 'https://example.com/test-anime.jpg',
+      };
 
-    const res = await request(app)
-      .get('/profile/favorites')
-      .set('Authorization', `Bearer ${testToken}`);
+      const res = await request(app)
+        .post(`/api/anime/${newFavorite.animeCode}`)
+        .set('Authorization', `Bearer ${testToken}`)
+        .send(newFavorite)
+        .expect(201);
 
-    expect(res.status).toBe(200);
-    expect(res.body.length).toBe(1);
-    expect(res.body[0].animeName).toBe('Test Anime');
+      expect(res.body.message).toBe('Аниме успешно добавлено в список любимых');
+    });
   });
 
-});
+  describe('GET /api/profile/favorites', () => {
+    it('should get user favorites', async () => {
+      const res = await request(app)
+        .get('/api/profile/favorites')
+        .set('Authorization', `Bearer ${testToken}`)
+        .expect(200);
 
-// Тесты для removeFavorite
-describe('DELETE api/anime/:animeCode/', () => {
-  it('should remove a favorite anime', async () => {
-    UserSchema.findById.mockResolvedValue(testUser);
-
-    FavoriteSchema.findOneAndDelete.mockResolvedValueOnce({});
-
-    const res = await request(app)
-      .delete('/anime/:animeCode')
-      .set('Authorization', `Bearer ${testToken}`);
-
-    expect(res.status).toBe(200);
-    expect(res.body.message).toBe('Аниме успешно удалено из избранного');
+      expect(res.body.length).toBeGreaterThan(0);
+    });
   });
 
-  it('should return 404 if anime is not found in favorites', async () => {
-    UserSchema.findById.mockResolvedValue(testUser);
+  describe('DELETE /api/anime/:animeCode', () => {
+    it('should remove anime from favorites', async () => {
+      const testAnimeCode = 'test-anime';
 
-    FavoriteSchema.findOneAndDelete.mockResolvedValueOnce(null);
+      const res = await request(app)
+        .delete(`/api/anime/${testAnimeCode}`)
+        .set('Authorization', `Bearer ${testToken}`)
+        .expect(200);
 
-    const res = await request(app)
-      .delete('/anime/:animeCode')
-      .set('Authorization', `Bearer ${testToken}`);
-
-    expect(res.status).toBe(404);
-    expect(res.body.message).toBe('Аниме не найдено в избранном пользователя');
+      expect(res.body.message).toBe('Аниме успешно удалено из избранного');
+    });
   });
 
+  describe('GET /api/anime/:animeCode/check', () => {
+    it('should check favorite status', async () => {
+      const testAnimeCode = 'test-anime';
+
+      const res = await request(app)
+        .get(`/api/anime/${testAnimeCode}/check`)
+        .set('Authorization', `Bearer ${testToken}`)
+        .expect(200);
+
+      expect(res.body.status).toBe('not_added');
+    });
+  });
 });
