@@ -1,1 +1,1 @@
-https://kiramu.vercel.app
+https://kiramu-anime.vercel.app/
